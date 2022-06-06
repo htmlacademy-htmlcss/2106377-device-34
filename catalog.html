@@ -10,20 +10,16 @@
   <header class="page-header">
     <h1 class="visually-hidden">Device</h1>
     <a class="logo" href="index.html">
-      <img class="logo" src="" alt="Логотип Device">
+      <img class="logo" src="/images/vector/header/group-logo-device.svg" width="145" height="36" alt="Логотип Device">
     </a>
     <nav class="navigation">
-      <ul class="navigation-list">
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Текст поиска</a>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Найти</a>
-        </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Войти</a>
-        </li>
-      </ul>
+      <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="get">
+        <label class="search"><input class="search-input" type="text" name="search"
+            placeholder="Текст поиска">
+        </label>
+        <input class="search-input" type="submit" value="Найти">
+      </form>
+      <a class="navigation-link" href="#">Войти</a>
       <ul class="navigation-list-user">
         <li class="navigation-item">
           <a class="navigation-link" href="#">Сравнить</a>
@@ -35,6 +31,38 @@
       <ul class="benefits">
         <li class="benefits-item">
           <a class="benefits-link" href="catalog.html">Каталог</a>
+          <ol>
+            <li>
+              <a class="category-link" href="catalog.html">
+                <p class="category-description">Виртуальная реальность</p>
+              </a>
+            </li>
+            <li>
+              <a class="category-link" href="catalog.html">
+                <p class="category-description">Моноподы для селфи</p>
+              </a>
+            </li>
+            <li>
+              <a class="category-link" href="catalog.html">
+                <p class="category-description">Экшн-камеры</p>
+              </a>
+            </li>
+            <li>
+              <a class="category-link" href="catalog.html">
+                <p class="category-description">Фитнес-браслеты</p>
+              </a>
+            </li>
+            <li>
+              <a class="category-link" href="catalog.html">
+                <p class="category-description">Умные часы</p>
+              </a>
+            </li>
+            <li>
+              <a class="category-link" href="catalog.html">
+                <p class="category-description">Квадрокоптеры</p>
+              </a>
+            </li>
+          </ol>
         </li>
         <li class="benefits-item">
           <a class="benefits-link" href="#">Доставка</a>
@@ -137,28 +165,28 @@
       <ul class="product-card-list">
         <li class="product-card-item">
           <a class="product-card-link" href="product.html">
-            <img class="product-card-image" src="" alt="Любительская селфи-палка">
+            <img class="product-card-image" src="/images/rastr/catalog/nonprofessional-selfie-stick.jpg" width="360" height="380" alt="Любительская селфи-палка">
             <h3 class="product-card-title">Любительская <br> селфи-палка</h3>
           </a>
           <p class="product-card-price">500 ₽</p>
         </li>
         <li class="product-card-item">
           <a class="product-card-link" href="product.html">
-            <img class="product-card-image" src="" alt="Профессиональная селфи-палка">
+            <img class="product-card-image" src="/images/rastr/catalog/professional-selfie-stick.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
             <h3 class="product-card-title">Профессиональная <br> селфи-палка</h3>
           </a>
           <p class="product-card-price">1 500 ₽</p>
         </li>
         <li class="product-card-item">
           <a class="product-card-link" href="product.html">
-            <img class="product-card-image" src="" alt="Непотопляемая селфи-палка">
+            <img class="product-card-image" src="/images/rastr/catalog/unsinkable-selfie-stick.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
             <h3 class="product-card-title">Непотопляемая <br> селфи-палка</h3>
           </a>
           <p class="product-card-price">2 500 ₽</p>
         </li>
         <li class="product-card-item">
           <a class="product-card-link" href="product.html">
-            <img class="product-card-image" src="" alt="Селфи-палка «Следуй за мной»">
+            <img class="product-card-image" src="/images/rastr/catalog/selfie-stick-follow-me.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
             <h3 class="product-card-title">Селфи-палка «Следуй за <br> мной»</h3>
           </a>
           <p class="product-card-price">1 500 ₽</p>
@@ -195,7 +223,8 @@
   <footer class="page-footer">
     <section class="footer-contact">
       <h2 class="visually-hidden">Device</h2>
-      <img class="footer-contact-logo" src="" alt="Логотип Device">
+      <img class="footer-contact-logo" src="/images/vector/footer/Group-logo-device.svg" width="145" height="36"
+        alt="Логотип Device">
       <address class="contacts-address">
         <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
       </address>
@@ -219,23 +248,30 @@
       <ul class="footer-social-list">
         <li class="footer-social-item">
           <a class="button" href="https://t.me/htmlacademy">
+            <img class="social-image" src="/images/vector/footer/telegram.svg" width="13.34" height="11.19"
+              alt="Телеграмм">
             <span class="visually-hidden">Telegram</span>
           </a>
         </li>
         <li class="footer-social-item">
           <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+            <img class="social-image" src="/images/vector/footer/YouTube.svg" width="16" height="10.67" alt="Ютюб">
             <span class="visually-hidden">Youtube</span>
           </a>
         </li>
         <li class="footer-social-item">
           <a class="button" href="https://twitter.com/htmlacademy_ru">
+            <img class="social-image" src="/images/vector/footer/Twitter.svg" width="15" height="14.06" alt="Твиттер">
             <span class="visually-hidden">Twitter</span>
           </a>
         </li>
       </ul>
     </section>
     <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-    <a class="htmlacademy-link" href="https://htmlacademy.ru/"></a>
+    <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+      <img class="htmlacademy-image" src="/images/vector/footer/html.academy.svg" width="114.9" height="32.9"
+        alt="Сайт htmlacademy">
+    </a>
   </footer>
 </body>
 
