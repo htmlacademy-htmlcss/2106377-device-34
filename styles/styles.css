@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Rubik";
     font-weight: 700;
-    font-style: Bold;
+    font-style: normal;
     src: url("fonts/rubik-700.woff2") format("woff2");
     font-display: swap;
 }
