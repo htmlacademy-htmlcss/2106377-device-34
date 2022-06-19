@@ -14,67 +14,61 @@
     <a class="logo" href="index.html">
       <img class="logo" src="/images/vector/header/group-logo-device.svg" width="145" height="36" alt="Логотип Device">
     </a>
-    <nav class="navigation">
-      <form class="navigation-search" action="https://echo.htmlacademy.ru/" method="get">
+    <div class="user-menu">
+      <!--сделать  <div class="user-menu-wrapper"> для флексов-->
+      <form class="user-search" action="https://echo.htmlacademy.ru/" method="get">
         <label class="search"><input class="search-input" type="text" name="search" placeholder="Текст поиска">
         </label>
         <input class="search-input" type="submit" value="Найти">
       </form>
-      <a class="navigation-link" href="#">Войти</a>
-      <ul class="navigation-list-user">
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Сравнить</a>
+      <a class="user-menu-link" href="#">Войти</a>
+      <!-- </div> -->
+      <ul class="user-menu-list">
+        <li class="user-menu-item">
+          <a class="user-menu-link" href="#">Сравнить</a>
         </li>
-        <li class="navigation-item">
-          <a class="navigation-link" href="#">Корзина</a>
-        </li>
-      </ul>
-      <ul class="benefits">
-        <li class="benefits-item">
-          <a class="benefits-link" href="catalog.html">Каталог</a>
-          <ol>
-            <li>
-              <a class="category-link" href="catalog.html">
-                <p class="category-description">Виртуальная реальность</p>
-              </a>
-            </li>
-            <li>
-              <a class="category-link" href="catalog.html">
-                <p class="category-description">Моноподы для селфи</p>
-              </a>
-            </li>
-            <li>
-              <a class="category-link" href="catalog.html">
-                <p class="category-description">Экшн-камеры</p>
-              </a>
-            </li>
-            <li>
-              <a class="category-link" href="catalog.html">
-                <p class="category-description">Фитнес-браслеты</p>
-              </a>
-            </li>
-            <li>
-              <a class="category-link" href="catalog.html">
-                <p class="category-description">Умные часы</p>
-              </a>
-            </li>
-            <li>
-              <a class="category-link" href="catalog.html">
-                <p class="category-description">Квадрокоптеры</p>
-              </a>
-            </li>
-          </ol>
-        </li>
-        <li class="benefits-item">
-          <a class="benefits-link" href="#">Доставка</a>
-        </li>
-        <li class="benefits-item">
-          <a class="benefits-link" href="#">Гарантия</a>
-        </li>
-        <li class="benefits-item">
-          <a class="benefits-link" href="Contact.html">Контакты</a>
+        <li class="user-menu-item">
+          <a class="user-menu-link" href="#">Корзина</a>
         </li>
       </ul>
+    </div>
+    <nav class="navigation">
+
+      <ul class="navigation-list">
+        <li class="navigation-item">
+          <a class="navigation-link" href="catalog.html">Каталог</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">Доставка</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="#">Гарантия</a>
+        </li>
+        <li class="navigation-item">
+          <a class="navigation-link" href="Contact.html">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="category-list">
+      <li>
+        <a class="category-link" href="catalog.html">Виртуальная реальность</a>
+      </li>
+      <li>
+        <a class="category-link" href="catalog.html">Моноподы для селфи</a>
+      </li>
+      <li>
+        <a class="category-link" href="catalog.html">Экшн-камеры</a>
+      </li>
+      <li>
+        <a class="category-link" href="catalog.html">Фитнес-браслеты</a>
+      </li>
+      <li>
+        <a class="category-link" href="catalog.html">Умные часы </a>
+      </li>
+      <li>
+        <a class="category-link" href="catalog.html">Квадрокоптеры</a>
+      </li>
+    </ul>
     </nav>
   </header>
 
@@ -230,12 +224,12 @@
   </main>
 
   <footer class="page-footer">
+    <h2 class="visually-hidden">Device</h2>
+    <img class="footer-contact-logo" src="/images/vector/footer/Group-logo-device.svg" width="145" height="36"
+      alt="Логотип Device">
     <section class="footer-contact">
-      <h2 class="visually-hidden">Device</h2>
-      <img class="footer-contact-logo" src="/images/vector/footer/Group-logo-device.svg" width="145" height="36"
-        alt="Логотип Device">
-      <address class="contacts-address">
-        <p class="contacts-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+      <address class="footer-address">
+        <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
       </address>
     </section>
     <section class="footer-benefits">
@@ -276,7 +270,7 @@
         </li>
       </ul>
     </section>
-    <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+    <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
     <a class="htmlacademy-link" href="https://htmlacademy.ru/">
       <img class="htmlacademy-image" src="/images/vector/footer/html.academy.svg" width="114.9" height="32.9"
         alt="Сайт htmlacademy">
