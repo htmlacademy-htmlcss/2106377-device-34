@@ -22,7 +22,15 @@
     font-display: swap;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: "Rubik", sans-serif;
     font-weight: 400;
     font-size: 18px;
@@ -38,6 +46,183 @@ body {
     background-color: #FFFFFF;
 }
 
+.logo {
+    outline: 1px solid red;
+}
+/* ползовательское меню */
+.user-menu {
+    outline: 1px solid green;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 1040px;
+}
+.user-menu-wrapper {
+    outline: 1px solid yellowgreen;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.user-menu-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* навигация */
+.navigation {
+    outline: 2px solid yellow;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 1040px;
+}
+
+.navigation-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.category-list-header {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* main */
+.main-container {
+    flex-grow: 1;
+}
+.page-container {
+    width: 1440px;
+    margin: 0 auto;
+}
+/* slider */
+.gallery-list {
+    outline: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    width: 1480px;
+    margin: 0 auto;
+}
+/* catalog-category */
+.category-list {
+    outline: 1px solid blue;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 140px;
+}
+/* services */
+.services {
+    outline: 1px solid violet;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 140px;
+}
+
+/* delivery-custom */
+
+.delivery-custom-made{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 140px;
+}
+/* about_us */
+
+.columns-about_us {
+    outline: 1px solid yellow;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 140px;
+}
+.about_us {
+    width: 520px;
+}
+
+.contacts {
+    width: 532px;
+}
+
+.subscription-wrapper {
+    outline: 1px solid darkorange;
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    margin: 0 auto;
+}
+.subscription-digest {
+    display: flex;
+    margin-left: 147px;
+    margin-right: 133px;
+    padding: 0;
+}
+.subscription-mail {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.subscription-form {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+/* footer */
+.page-footer-container {
+    outline: 1px solid darkblue;
+    display: flex;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.footer-logo-address {
+    outline: 1px solid green;
+    width: 239px;
+    margin-left: 140px;
+    margin-right: 119px;
+}
+
+.footer-useful {
+    outline: 1px solid green;
+    width: 444px;
+    margin-right: 183px;
+}
+.footer-services-list {
+    outline: 2px solid darkgreen;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-social-list {
+    outline: 2px solid darkgreenw;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-phone-and-developer{
+    outline: 1px solid green;
+    width: 175px;
+    margin-right: 140px;
+}
+
+/* fonts */
 .user-menu-link {
     color: inherit;
     align-items: center;
@@ -61,8 +246,6 @@ body {
     align-items: center;
     text-decoration: none;
 }
-
-/* main */
 
 .number {
     font-weight: 700;
@@ -102,7 +285,6 @@ body {
 .button-about-us,
 .button-email-us,
 .subscription-input,
-.benefits-link,
 .show,
 .pagination-link-pagination-prev,
 .pagination-link-pagination-next {
@@ -128,6 +310,7 @@ body {
     color: #000000;
     text-align: left;
     text-decoration: none;
+    width: 160px;
 }
 
 .catalog-category-description {
@@ -144,6 +327,7 @@ body {
 
 .delivery-custom-made {
     background: #F0F0F0 1160px 100px;
+
 }
 
 .button-delivery {
@@ -153,6 +337,7 @@ body {
     line-height: 23px;
     color: #000000;
     text-decoration: none;
+    margin: 0 auto;
 }
 
 .delivery-custom-made-image {
@@ -193,14 +378,14 @@ body {
     color: #FFFFFF;
 }
 
-.footer-address,
+.footer-address-text,
 .pagination {
     font-style: normal;
     font-size: 16px;
     line-height: 20px;
 }
 
-.benefits-link,
+.services-link,
 .button-social {
     font-family: "Raleway", sans-serif;
     font-weight: 800;
@@ -213,6 +398,7 @@ body {
 }
 
 .footer-contacts-phone {
+    font-size: 16px;
     line-height: 20px;
     color: inherit;
     text-decoration-line: underline;
