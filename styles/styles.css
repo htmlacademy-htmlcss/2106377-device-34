@@ -27,7 +27,8 @@ html {
 }
 
 body {
-    margin: 0;
+    width: 1440px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -49,21 +50,31 @@ body {
 .logo {
     outline: 1px solid red;
 }
+
+.page-header-container {
+    width: 1160px;
+    margin: 0 auto;
+    background-color: #FFE17F;
+}
 /* ползовательское меню */
+
 .user-menu {
     outline: 1px solid green;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
-    width: 1040px;
 }
+
 .user-menu-wrapper {
-    outline: 1px solid yellowgreen;
+    outline: 1px solid palevioletred;
     display: flex;
     margin: 0;
     padding: 0;
 }
+
 .user-menu-list {
+    outline: 1px solid palevioletred;
+    width: 240px;
     display: flex;
     margin: 0;
     padding: 0;
@@ -71,22 +82,25 @@ body {
 }
 
 /* навигация */
+
 .navigation {
-    outline: 2px solid yellow;
+    outline: 2px solid purple;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
-    width: 1040px;
 }
 
 .navigation-list {
     display: flex;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 .category-list-header {
+    width: 675px;
+    outline: 2px solid purple;
     display: flex;
     margin: 0;
     padding: 0;
@@ -94,14 +108,18 @@ body {
 }
 
 /* main */
+
 .main-container {
     flex-grow: 1;
 }
+
 .page-container {
-    width: 1440px;
+    width: 1160px;
     margin: 0 auto;
 }
+
 /* slider */
+
 .gallery-list {
     outline: 1px solid red;
     display: flex;
@@ -109,31 +127,37 @@ body {
     width: 1480px;
     margin: 0 auto;
 }
+
 /* catalog-category */
+
 .category-list {
     outline: 1px solid blue;
     display: flex;
     justify-content: space-between;
     margin: 0;
-    padding: 0 140px;
+    padding: 0;
 }
+
 /* services */
+
 .services {
     outline: 1px solid violet;
     display: flex;
     justify-content: space-between;
     margin: 0;
-    padding: 0 140px;
+    padding: 0;
 }
+
 
 /* delivery-custom */
 
-.delivery-custom-made{
+.delivery-custom-made {
     display: flex;
     justify-content: space-between;
     margin: 0;
-    padding: 0 140px;
+    padding: 0;
 }
+
 /* about_us */
 
 .columns-about_us {
@@ -141,10 +165,12 @@ body {
     display: flex;
     justify-content: space-between;
     margin: 0;
-    padding: 0 140px;
+    padding: 0;
 }
+
 .about_us {
     width: 520px;
+    margin-right: 108;
 }
 
 .contacts {
@@ -155,15 +181,16 @@ body {
     outline: 1px solid darkorange;
     display: flex;
     flex-direction: column;
-    width: 1440px;
     margin: 0 auto;
 }
+
 .subscription-digest {
     display: flex;
     margin-left: 147px;
     margin-right: 133px;
     padding: 0;
 }
+
 .subscription-mail {
     display: flex;
     justify-content: space-between;
@@ -198,6 +225,7 @@ body {
     width: 444px;
     margin-right: 183px;
 }
+
 .footer-services-list {
     outline: 2px solid darkgreen;
     display: flex;
@@ -216,13 +244,53 @@ body {
     list-style: none;
 }
 
-.footer-phone-and-developer{
+.footer-phone-and-developer {
     outline: 1px solid green;
     width: 175px;
     margin-right: 140px;
 }
 
-/* fonts */
+/* catalog */
+
+.inner-header {
+    display: flex;
+    flex-direction: column;
+    width: 1079px;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs {
+    display: flex;
+    width: 429px;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.catalog-products {
+    outline: 1px solid deeppink;
+    display: flex;
+}
+
+.catalog-filter {
+    width: 320px;
+}
+
+.catalog-product-card-sorting {
+    outline: 1px solid deepskyblue;
+    width: 840px;
+}
+
+.catalog-sorting {
+    outline: 1px solid deepskyblue;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* FONTS header*/
+
 .user-menu-link {
     color: inherit;
     align-items: center;
@@ -238,7 +306,7 @@ body {
     text-decoration: none;
     text-transform: uppercase;
 }
-
+/* FONTS  main*/
 .category-link {
     color: inherit;
     font-size: 16px;
@@ -299,7 +367,7 @@ body {
 }
 
 .catalog-category-image {
-    background: #FFE17F 160px 160px;
+    background: #FFE17F ;
 }
 
 .catalog-link {
@@ -322,11 +390,11 @@ body {
 }
 
 .services {
-    background: #F0F0F0 1440px 289px;
+    background: #F0F0F0;
 }
 
 .delivery-custom-made {
-    background: #F0F0F0 1160px 100px;
+    background: #F0F0F0;
 
 }
 
@@ -341,7 +409,7 @@ body {
 }
 
 .delivery-custom-made-image {
-    background: #FFC700 125px 100px;
+    background: #FFC700;
 }
 
 
@@ -369,12 +437,12 @@ body {
 }
 
 .subscription {
-    background: #F0F0F0 1440px 421px;
+    background: #F0F0F0;
 }
 
-/* footer */
+/*FONTS footer */
 .page-footer {
-    background: #444444 1440px 321px;
+    background: #444444;
     color: #FFFFFF;
 }
 
@@ -427,7 +495,7 @@ body {
 }
 
 .pagination-group {
-    background: #EBEBEB 760px 71px;
+    background: #EBEBEB;
     color: #000000;
 }
 
