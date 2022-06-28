@@ -12,70 +12,70 @@
   <header class="page-header">
     <div class="page-header-container">
       <h1 class="visually-hidden">Device</h1>
-      <a class="logo" href="#">
-        <img class="logo" src="./images/vector/header/group-logo-device.svg" width="145" height="36"
+      <a class="logo" href="index.html">
+        <img class="logo-image" src="./images/vector/header/group-logo-device.svg" width="145" height="36"
           alt="Логотип Device">
       </a>
       <div class="user-menu">
         <div class="user-menu-wrapper">
           <form class="user-search" action="https://echo.htmlacademy.ru/" method="get">
-            <label class="search"><input class="search-input" type="text" name="search" placeholder="Текст поиска">
+            <label class="search">
+              <input class="search-input" type="text" name="search" placeholder="Текст поиска">
             </label>
             <input class="search-input" type="submit" value="Найти">
           </form>
-          <a class="user-menu-link" href="#">Войти</a>
+          <a class="user-menu-link login" href="#">Войти</a>
         </div>
         <ul class="user-menu-list">
-          <li class="user-menu-item">
+          <li class="user-menu-item compare">
             <a class="user-menu-link" href="#">Сравнить</a>
           </li>
-          <li class="user-menu-item">
+          <li class="user-menu-item cart">
             <a class="user-menu-link" href="#">Корзина</a>
           </li>
         </ul>
       </div>
       <nav class="navigation">
         <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Каталог</a>
-            <ul class="category-list-header">
-              <li>
-                <a class="category-link" href="catalog.html">Виртуальная реальность</a>
-              </li>
-              <li>
-                <a class="category-link" href="catalog.html">Моноподы для селфи</a>
-              </li>
-              <li>
-                <a class="category-link" href="catalog.html">Экшн-камеры</a>
-              </li>
-              <li>
-                <a class="category-link" href="catalog.html">Фитнес-браслеты</a>
-              </li>
-              <li>
-                <a class="category-link" href="catalog.html">Умные часы </a>
-              </li>
-              <li>
-                <a class="category-link" href="catalog.html">Квадрокоптеры</a>
-              </li>
-            </ul>
+          <li class="navigation-item products">
+            <a class="navigation-link" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-item delivey">
             <a class="navigation-link" href="#">Доставка</a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-item guarantee">
             <a class="navigation-link" href="#">Гарантия</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="Contact.html">Контакты</a>
+            <a class="navigation-link " href="Contact.html">Контакты</a>
           </li>
         </ul>
       </nav>
+      <ul class="category-list-header">
+        <li>
+          <a class="category-link" href="catalog.html">Виртуальная реальность</a>
+        </li>
+        <li>
+          <a class="category-link" href="catalog.html">Моноподы для селфи</a>
+        </li>
+        <li>
+          <a class="category-link" href="catalog.html">Экшн-камеры</a>
+        </li>
+        <li>
+          <a class="category-link" href="catalog.html">Фитнес-браслеты</a>
+        </li>
+        <li>
+          <a class="category-link" href="catalog.html">Умные часы </a>
+        </li>
+        <li>
+          <a class="category-link" href="catalog.html">Квадрокоптеры</a>
+        </li>
+      </ul>
     </div>
-
   </header>
   <main class="main-inner">
-    <div class="page-container">
-      <header class="inner-header">
+    <header class="inner-header container">
+      <div class="inner-header-wrapper">
         <h2 class="inner-header-title">Моноподы для селфи</h2>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
@@ -88,9 +88,11 @@
             <a class="breadcrumbs-link">Моноподы для селфи</a>
           </li>
         </ul>
-      </header>
+      </div>
+    </header>
 
-      <section class="catalog-products">
+    <section class="catalog-products">
+      <div class="products-wrapper container">
         <div class="catalog-filter">
           <h2 class="catalog-products-title">фильтр:</h2>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
@@ -149,7 +151,6 @@
             <button class="show" type="submit">Показать</button>
           </form>
         </div>
-
         <div class="catalog-product-card-sorting">
           <div class="catalog-sorting">
             <h2 class="catalog-sorting-title">сортировка:</h2>
@@ -170,7 +171,6 @@
             </div>
 
           </div>
-
 
           <h2 class="visually-hidden">Карточки продуктов</h2>
           <ul class="product-card-list">
@@ -212,7 +212,7 @@
             <a class="pagination-link-pagination-prev pagination-disabled">
               <span>Назад</span>
             </a>
-            <ul class="pagination">
+            <ul class="pagination-list">
               <li class="pagination-item">
                 <a class="pagination-link pagination-current">1</a>
               </li>
@@ -234,15 +234,13 @@
             </a>
           </div>
         </div>
+      </div>
+    </section>
 
-      </section>
-
-    </div>
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer-container">
-
+    <div class="footer-wrapper container">
       <div class="footer-logo-address">
         <h2 class="visually-hidden">Device</h2>
         <img class="footer-contact-logo" src="./images/vector/footer/group-logo-device.svg" width="145" height="36"
@@ -293,7 +291,7 @@
       </div>
 
       <div class="footer-phone-and-developer">
-        <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
         <a class="htmlacademy-link" href="https://htmlacademy.ru/">
           <img class="htmlacademy-image" src="./images/vector/footer/html.academy.svg" width="114.9" height="32.9"
             alt="Сайт htmlacademy">
