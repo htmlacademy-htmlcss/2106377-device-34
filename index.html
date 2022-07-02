@@ -75,54 +75,73 @@
   </header>
 
   <main class="main-container main-index">
-    <div class="background container">
-      <img class="background-image" src="./images/vector/vector-background.svg" width="1160" height="300"
-        alt="желтый_фон">
-    </div>
-    <section class="gallery">
+    <section class="gallery-container">
       <h2 class="visually-hidden">Слайдер</h2>
       <ul class="gallery-list">
         <li class="gallery-item">
           <p class="number">01</p>
-          <img class="slider-image" src="./images/rastr/index/quadcopter.png" width="560" height="560"
-            alt="квадрокоптер">
-          <p class="gallery-description">Порхает как бабочка,
-            жалит как пчела!</p>
-          <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным
-            под стандартную камеру.</p>
-          <a class="button button-detail" href="#">Подробнее</a>
-          <p class="gallery-feature">Дальность полета</p>
-          <p class="gallery-value">800 м</p>
-          <p class="gallery-feature">Радиус поражения</p>
-          <p class="gallery-value">50 м</p>
+          <div class="slider-inner">
+            <img class="slider-image" src="./images/rastr/index/quadcopter.png" width="560" height="560"
+              alt="квадрокоптер">
+            <div class="slider-profile">
+              <p class="gallery-description-title">Порхает как бабочка,
+                жалит как пчела!</p>
+              <p class="gallery-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
+                замаскированным
+                под стандартную камеру.</p>
+              <a class="button button-detail" href="#">Подробнее</a>
+              <dl class="features">
+                <dd class="gallery-feature">Дальность полета</dd>
+                <dt class="gallery-value">800 м</dt>
+                <dl class="gallery-feature">Радиус поражения</dl>
+                <dt class="gallery-value">50 м</dt>
+              </dl>
+            </div>
+          </div>
         </li>
+
         <li class="gallery-item">
           <p class="number">02</p>
-          <img class="slider-image" src="./images/rastr/index/fit-bracelet.png" width="560" height="560" alt="
+          <div class="slider-inner">
+            <img class="slider-image" src="./images/rastr/index/fit-bracelet.png" width="560" height="560" alt="
               фитнес-браслет">
-          <p class="gallery-description">Худеем
-            правильно!</p>
-          <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать
-            диету.</p>
-          <a class="button button-detail" href="#">Подробнее</a>
-          <p class="gallery-feature">Без подзарядки</p>
-          <p class="gallery-value">48 часов</p>
+            <div class="slider-profile">
+              <p class="gallery-description-title">Худеем
+                правильно!</p>
+              <p class="gallery-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
+                занятия и соблюдать
+                диету.</p>
+              <a class="button button-detail" href="#">Подробнее</a>
+              <dl class="features">
+                <dd class="gallery-feature">Без подзарядки</dd>
+                <dl class="gallery-value">48 часов</dl>
+              </dl>
+            </div>
+          </div>
         </li>
+
         <li class="gallery-item">
           <p class="number">03</p>
-          <img class="slider-image" src="./images/rastr/index/selfie-stick.png" width="560" height="560"
-            alt="палка для селфи">
-          <p class="gallery-description">Делай селфи,
-            как Бен Стиллер!</p>
-          <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!)
-            метров длиной и весом всего 5 кг.</p>
-          <a class="button button-detail" href="#">Подробнее</a>
-          <p class="gallery-feature">Длина палки</p>
-          <p class="gallery-value">8,5 м</p>
-          <p class="gallery-feature">Вес палки</p>
-          <p class="gallery-value">5 кг</p>
-          <p class="gallery-feature">Материал</p>
-          <p class="gallery-value">Карбон</p>
+          <div class="slider-inner">
+            <img class="slider-image" src="./images/rastr/index/selfie-stick.png" width="560" height="560"
+              alt="палка для селфи">
+            <div class="slider-profile">
+              <p class="gallery-description-title">Делай селфи,
+                как Бен Стиллер!</p>
+              <p class="gallery-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь,
+                Карл!)
+                метров длиной и весом всего 5 кг.</p>
+              <a class="button button-detail" href="#">Подробнее</a>
+              <dl class="features">
+                <dd class="gallery-feature">Длина палки</dd>
+                <dt class="gallery-value">8,5 м</dt>
+                <dd class="gallery-feature">Вес палки</dd>
+                <dt class="gallery-value">5 кг</dt>
+                <dd class="gallery-feature">Материал</dd>
+                <dt class="gallery-value">Карбон</dt>
+              </dl>
+            </div>
+          </div>
         </li>
       </ul>
 
@@ -288,12 +307,11 @@
         </div>
         <div class="subscription-email">
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="subscription-form">
-              <label for="subscription-mail">
-                <input type="email" id="subscription-mail" name="subscription-mail" placeholder="example@email.ru">
-              </label>
-            </p>
-            <input class="subscription-input tap" type="submit" value="Подписаться">
+            <label for="subscription-mail">
+              <input class="mail" type="email" id="subscription-mail" name="subscription-mail"
+                placeholder="example@email.ru">
+            </label>
+            <input class="subscription-input" type="submit" value="Подписаться">
           </form>
           <p class="subscription-comment">Это бесплатно</p>
         </div>
