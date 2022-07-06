@@ -17,15 +17,13 @@
           alt="Логотип Device">
       </a>
       <div class="user-menu">
-        <div class="user-menu-wrapper">
-          <form class="user-search" action="https://echo.htmlacademy.ru/" method="get">
-            <label class="search">
-              <input class="search-input" type="text" name="search" placeholder="Текст поиска">
-            </label>
-            <input class="search-input" type="submit" value="Найти">
-          </form>
-          <a class="user-menu-link login" href="#">Войти</a>
-        </div>
+        <form class="user-search" action="https://echo.htmlacademy.ru/" method="get">
+          <label class="search" for="search-field">
+            <input id="search-field" class="text-input" type="text" name="search" placeholder="Текст поиска">
+          </label>
+          <input class="search-input" type="submit" value="Найти">
+        </form>
+        <a class="user-menu-link login" href="#">Войти</a>
         <ul class="user-menu-list">
           <li class="user-menu-item compare">
             <a class="user-menu-link" href="#">Сравнить</a>
@@ -38,16 +36,18 @@
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item products">
-            <a class="navigation-link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="navigation-item delivey">
-            <a class="navigation-link" href="#">Доставка</a>
-          </li>
-          <li class="navigation-item guarantee">
-            <a class="navigation-link" href="#">Гарантия</a>
+            <a class="navigation-link catalog" href="catalog.html">Каталог товаров</a>
+            <button class="button-category" type="menu"></button>
+
           </li>
           <li class="navigation-item">
-            <a class="navigation-link " href="Contact.html">Контакты</a>
+            <a class="navigation-link delivery" href="#">Доставка</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link guarantee" href="#">Гарантия</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link contacting" href="Contact.html">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -78,7 +78,7 @@
     <section class="gallery-container">
       <h2 class="visually-hidden">Слайдер</h2>
       <ul class="gallery-list">
-        <li class="gallery-item">
+        <li class="gallery-item first-slider">
           <p class="number">01</p>
           <div class="slider-inner">
             <img class="slider-image" src="./images/rastr/index/quadcopter.png" width="560" height="560"
@@ -96,11 +96,28 @@
                 <dl class="gallery-feature">Радиус поражения</dl>
                 <dt class="gallery-value">50 м</dt>
               </dl>
+              <ul class="slider-pagination">
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                    <span class="visually-hidden">Фото01</span>
+                  </button>
+                </li>
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button-next" type="button">
+                    <span class="visually-hidden">Фото02</span>
+                  </button>
+                </li>
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button-next" type="button">
+                    <span class="visually-hidden">Фото03</span>
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
         </li>
 
-        <li class="gallery-item">
+        <li class="gallery-item second-slider">
           <p class="number">02</p>
           <div class="slider-inner">
             <img class="slider-image" src="./images/rastr/index/fit-bracelet.png" width="560" height="560" alt="
@@ -120,7 +137,7 @@
           </div>
         </li>
 
-        <li class="gallery-item">
+        <li class="gallery-item third-slider">
           <p class="number">03</p>
           <div class="slider-inner">
             <img class="slider-image" src="./images/rastr/index/selfie-stick.png" width="560" height="560"
@@ -144,31 +161,24 @@
           </div>
         </li>
       </ul>
+      <div class="slider">
+        <button class="button-slider" type="button">
+          <svg class="slider-icon" aria-hidden="true" focusable="false" width="20" height="60" viewBox="0 0 20 60"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 60h-3.5L0 30 16.5 0H20L3.8 30 20 60Z" fill="#000" />
+          </svg>
+          <span class="visually-hidden">Предыдущее фото</span>
+        </button>
+        <button class="button-slider" type="button">
+          <svg class="slider-icon" aria-hidden="true" focusable="false" width="20" height="60" viewBox="0 0 20 60"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h3.5L20 30 3.5 60H0l16.2-30L0 0Z" fill="#000" />
+          </svg>
+          <span class="visually-hidden">Следующее фото</span>
+        </button>
+      </div>
 
-      <button class="slider-button slider-prev" type="button">
-        <span class="visually-hidden">Предыдущее фото</span>
-      </button>
-      <button class="slider-button slider-next" type="button">
-        <span class="visually-hidden">Следующее фото</span>
-      </button>
 
-      <ul class="slider-pagination">
-        <li class="slider-pagination-item">
-          <button class="slider-pagination-button slider-pagination-button-current" type="button">
-            <span class="visually-hidden">Фото01</span>
-          </button>
-        </li>
-        <li class="slider-pagination-item">
-          <button class="slider-pagination-button" type="button">
-            <span class="visually-hidden">Фото02</span>
-          </button>
-        </li>
-        <li class="slider-pagination-item">
-          <button class="slider-pagination-button" type="button">
-            <span class="visually-hidden">Фото03</span>
-          </button>
-        </li>
-      </ul>
     </section>
 
     <section class="catalog-category container">
@@ -219,50 +229,71 @@
       </ol>
     </section>
 
-    <section class="services">
-      <div class="services-wrapper container">
-        <ol class="services-list">
-          <li class="services-item">
-            <a class="button button-services" href="#">Доставка</a>
-          </li>
-          <li class="services-item">
-            <a class="button button-services" href="#">Гарантия</a>
-          </li>
-          <li class="services-item">
-            <a class="button button-services" href="#">Кредит</a>
-          </li>
-        </ol>
-        <ol class="services-description-list">
-          <li class="services-item">
+    <section class="services-container">
+      <h2 class="visually-hidden">Сервисы</h2>
+      <ul class="services-description-list">
+        <li class="box-delivery">
+          <ul class="services-list">
+            <li class="services-item-delivery">
+              <a class="button button-services" href="#">Доставка</a>
+            </li>
+            <li class="services-item-guarantee">
+              <a class="button button-services" href="#">Гарантия</a>
+            </li>
+            <li class="services-item-credit">
+              <a class="button button-services" href="#">Кредит</a>
+            </li>
+          </ul>
+          <div class="services-text">
             <p class="services-description-title">Доставка</p>
             <p class="services-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду
               совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            <img class="services-image" src="" alt="Доставка">
-          </li>
-          <li class="sservices-item">
+          </div>
+
+        </li>
+        <li class="box-guarantee">
+          <ul class="services-list">
+            <li class="services-item-delivery">
+              <a class="button button-services" href="#">Доставка</a>
+            </li>
+            <li class="services-item-guarantee">
+              <a class="button button-services" href="#">Гарантия</a>
+            </li>
+            <li class="services-item-credit">
+              <a class="button button-services" href="#">Кредит</a>
+            </li>
+          </ul>
+          <div class="services-text">
             <p class="services-description-title">Гарантия</p>
             <p class="services-description">Если из-за возгорания купленного у нас товара у вас сгорит дом
               — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-            <img class="services-image" src="" alt="Гарантия">
-          </li>
-          <li class="services-item">
+          </div>
+        </li>
+        <li class="box-credit">
+          <ul class="services-list">
+            <li class="services-item-delivery">
+              <a class="button button-services" href="#">Доставка</a>
+            </li>
+            <li class="services-item-guarantee">
+              <a class="button button-services" href="#">Гарантия</a>
+            </li>
+            <li class="services-item-credit">
+              <a class="button button-services" href="#">Кредит</a>
+            </li>
+          </ul>
+          <div class="services-text">
             <p class="services-description-title">Кредит</p>
             <p class="services-description">Залезть в долговую яму стало проще! Кредитные консультанты
               подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
-            <img class="services-image" src="" alt="Кредит">
-          </li>
-        </ol>
-      </div>
-
+          </div>
+        </li>
+      </ul>
     </section>
 
     <section class="delivery-custom-made container">
       <div class="delivery-image-wrapper">
-        <img class="delivery-custom-made-image" src="./images/vector/main-index/delivery-car.svg" width="47" height="31"
-          alt="Доставка под заказ">
-      </div>
-
       <a class="button button-delivery" href="delivery_custom_made.html">Доставим редкий товар под заказ</a>
+      </div>
     </section>
 
     <div class="columns-about_us container">
@@ -347,22 +378,17 @@
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="footer-social-list">
             <li class="footer-social-item">
-              <a class="button button-social" href="https://t.me/htmlacademy">
-                <img class="social-image" src="./images/vector/footer/telegram.svg" width="13.34" height="11.19"
-                  alt="Телеграмм">
+              <a class="button button-telegram" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Telegram</span>
               </a>
             </li>
             <li class="footer-social-item">
-              <a class="button button-social" href="https://www.youtube.com/user/htmlacademyru">
-                <img class="social-image" src="./images/vector/footer/youtube.svg" width="16" height="10.67" alt="Ютюб">
+              <a class="button button-youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Youtube</span>
               </a>
             </li>
             <li class="footer-social-item">
-              <a class="button button-social" href="https://twitter.com/htmlacademy_ru">
-                <img class="social-image" src="./images/vector/footer/twitter.svg" width="15" height="14.06"
-                  alt="Твиттер">
+              <a class="button button-twitter" href="https://twitter.com/htmlacademy_ru">
                 <span class="visually-hidden">Twitter</span>
               </a>
             </li>
@@ -371,13 +397,9 @@
       </div>
 
       <div class="footer-phone-and-developer">
-        <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
-        <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-          <img class="htmlacademy-image" src="./images/vector/footer/html.academy.svg" width="114.9" height="32.9"
-            alt="Сайт htmlacademy">
-        </a>
+        <a class="footer-contacts-phone" href="tel:+78128121212">Тел.:+7(812)812-12-12</a>
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/"></a>
       </div>
-
     </div>
   </footer>
 </body>
