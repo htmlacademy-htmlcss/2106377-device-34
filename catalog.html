@@ -17,15 +17,13 @@
           alt="Логотип Device">
       </a>
       <div class="user-menu">
-        <div class="user-menu-wrapper">
-          <form class="user-search" action="https://echo.htmlacademy.ru/" method="get">
-            <label class="search">
-              <input class="search-input" type="text" name="search" placeholder="Текст поиска">
-            </label>
-            <input class="search-input" type="submit" value="Найти">
-          </form>
-          <a class="user-menu-link login" href="#">Войти</a>
-        </div>
+        <form class="user-search" action="https://echo.htmlacademy.ru/" method="get">
+          <label class="search" for="search-field">
+            <input id="search-field" class="text-input" type="text" name="search" placeholder="Текст поиска">
+          </label>
+          <input class="search-input" type="submit" value="Найти">
+        </form>
+        <a class="user-menu-link login" href="#">Войти</a>
         <ul class="user-menu-list">
           <li class="user-menu-item compare">
             <a class="user-menu-link" href="#">Сравнить</a>
@@ -38,16 +36,18 @@
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item products">
-            <a class="navigation-link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="navigation-item delivey">
-            <a class="navigation-link" href="#">Доставка</a>
-          </li>
-          <li class="navigation-item guarantee">
-            <a class="navigation-link" href="#">Гарантия</a>
+            <a class="navigation-link catalog" href="catalog.html">Каталог товаров</a>
+            <button class="button-category" type="menu"></button>
+
           </li>
           <li class="navigation-item">
-            <a class="navigation-link " href="Contact.html">Контакты</a>
+            <a class="navigation-link delivery" href="#">Доставка</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link guarantee" href="#">Гарантия</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link contacting" href="Contact.html">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -95,15 +95,15 @@
       <div class="products-wrapper container">
         <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
           <h2 class="catalog-products-title">фильтр:</h2>
-          <fieldset class="catalog-filter-group">
+          <fieldset class="filter-group cost-field">
             <legend class="catalog-filter-title">Стоимость</legend>
             <input type="range" min="0" max="5000" value="3000">
             <div class="cost">
-              <p>от 0</p>
-              <p>до 5000</p>
+              <p class="text">от 0</p>
+              <p class="text">до 5000</p>
             </div>
           </fieldset>
-          <fieldset class="catalog-filter-group">
+          <fieldset class="filter-group color-field">
             <legend class="catalog-filter-title">Цвет</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
@@ -138,18 +138,18 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="catalog-filter-group">
+          <fieldset class="filter-group bluetooth-field">
             <legend class="catalog-filter-title">Bluetooth</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="radio" name="bluetooth" value="yes" checked>
+                  <input class="control-input-radio" type="radio" name="bluetooth" value="yes" checked>
                   Есть
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
-                  <input class="control-input" type="radio" name="bluetooth" value="no">
+                  <input class="control-input-radio" type="radio" name="bluetooth" value="no">
                   Нет
                 </label>
               </li>
@@ -167,14 +167,8 @@
               <option value="expensive">Дорогие</option>
             </select>
             <div class="sorting-button">
-              <a href="#" class="button button-up">
-                <img class="up" src="./images/vector/main-catalog/up-arrow.svg" width="11" height="10"
-                  alt="кнопка вверх">
-              </a>
-              <a href="#" class="button button-down">
-                <img class="up" src="./images/vector/main-catalog/down-arrow.svg" width="11" height="10"
-                  alt="кнопка вниз">
-              </a>
+              <a href="#" class="button button-up"></a>
+              <a href="#" class="button button-down"></a>
             </div>
           </div>
 
@@ -184,8 +178,7 @@
               <li class="product-card-item">
                 <a class="product-card-link" href="product.html">
                   <img class="product-card-image" src="./images/rastr/catalog/nonprofessional-selfie-stick.jpg"
-                    width="360" height="380" alt="Любительская селфи-палка">
-                </a>
+                    width="360" height="380" alt="Любительская селфи-палка"></a>
                 <div class="title-price">
                   <h3 class="product-card-title">Любительская <br> селфи-палка</h3>
                   <p class="product-card-price">500 ₽</p>
@@ -228,7 +221,7 @@
             <button class="load-more" type="button">Загрузить ещё</button>
             <div class="pagination-group">
               <a class="pagination-link-pagination-prev pagination-disabled">
-                <span>Назад</span>
+                <span class="active">Назад</span>
               </a>
               <ul class="pagination-list">
                 <li class="pagination-item">
@@ -248,7 +241,7 @@
                 </li>
               </ul>
               <a class="pagination-link-pagination-next" href="#">
-                <span>Вперёд</span>
+                <span class="active">Вперёд</span>
               </a>
             </div>
           </div>
@@ -286,22 +279,17 @@
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="footer-social-list">
             <li class="footer-social-item">
-              <a class="button button-social" href="https://t.me/htmlacademy">
-                <img class="social-image" src="./images/vector/footer/telegram.svg" width="13.34" height="11.19"
-                  alt="Телеграмм">
+              <a class="button button-telegram" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Telegram</span>
               </a>
             </li>
             <li class="footer-social-item">
-              <a class="button button-social" href="https://www.youtube.com/user/htmlacademyru">
-                <img class="social-image" src="./images/vector/footer/youtube.svg" width="16" height="10.67" alt="Ютюб">
+              <a class="button button-youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Youtube</span>
               </a>
             </li>
             <li class="footer-social-item">
-              <a class="button button-social" href="https://twitter.com/htmlacademy_ru">
-                <img class="social-image" src="./images/vector/footer/twitter.svg" width="15" height="14.06"
-                  alt="Твиттер">
+              <a class="button button-twitter" href="https://twitter.com/htmlacademy_ru">
                 <span class="visually-hidden">Twitter</span>
               </a>
             </li>
@@ -310,13 +298,9 @@
       </div>
 
       <div class="footer-phone-and-developer">
-        <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
-        <a class="htmlacademy-link" href="https://htmlacademy.ru/">
-          <img class="htmlacademy-image" src="./images/vector/footer/html.academy.svg" width="114.9" height="32.9"
-            alt="Сайт htmlacademy">
-        </a>
+        <a class="footer-contacts-phone" href="tel:+78128121212">Тел.:+7(812)812-12-12</a>
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/"></a>
       </div>
-
     </div>
   </footer>
 </body>
