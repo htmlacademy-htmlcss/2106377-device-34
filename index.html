@@ -30,6 +30,32 @@
           </li>
           <li class="user-menu-item cart">
             <a class="user-menu-link" href="#">Корзина</a>
+            <div class="popover popover-box popover-open">
+              <h2 class="popover-title visually-hidden">Корзина</h2>
+              <ul class="cart-list">
+                <li class="cart-item">
+                  <img class="cart-product-image" src="/images/rastr/index/popover-nonprofessional-selfie-stick.jpg"
+                    width="39" height="43" alt="Любительская селфи-палка">
+                  <span class="cart-product">Любительская селфи-палка</span>
+                  <button class="button-cart-product visually-hidden" type="button"></button>
+                  <span class="cart-product-icon"></span>
+                </li>
+                <li class="cart-item">
+                  <img class="cart-product-image" src="./images/rastr/index/popover-professional-selfie-stick.jpg"
+                    width="39" height="43" alt="Профессиональная селфи-палка">
+                  <span class="cart-product">Профессиональная селфи-палка</span>
+                  <button class="button-cart-product visually-hidden" type="button"></button>
+                  <span class="cart-product-icon"></span>
+                </li>
+              </ul>
+              <div class="summary-cart">
+                <span class="amount-cart-product">Товаров: 2</span>
+                <span class="sum-cart-product">Сумма: 2000 ₽</span>
+              </div>
+              <div class="cart-open">
+                <button class="button-cart-open" type="button">Открыть корзину</button>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -38,7 +64,26 @@
           <li class="navigation-item products">
             <a class="navigation-link catalog" href="catalog.html">Каталог товаров</a>
             <button class="button-category" type="menu"></button>
-
+            <ul class="category-list-subcatalog">
+              <li class="category-item vr">
+                <a class="category-link" href="catalog.html">Виртуальная реальность</a>
+              </li>
+              <li class=" category-item fit-bracelets">
+                <a class="category-link" href="catalog.html">Фитнес-браслеты</a>
+              </li>
+              <li class="category-item quadcopters">
+                <a class="category-link" href="catalog.html">Квадрокоптеры</a>
+              </li>
+              <li class="category-item monopod-selfies">
+                <a class="category-link" href="catalog.html">Моноподы для селфи</a>
+              </li>
+              <li class="category-item smart-watches">
+                <a class="category-link" href="catalog.html">Умные часы </a>
+              </li>
+              <li class="category-item action-cameras">
+                <a class="category-link" href="catalog.html">Экшн-камеры</a>
+              </li>
+            </ul>
           </li>
           <li class="navigation-item">
             <a class="navigation-link delivery" href="#">Доставка</a>
@@ -51,26 +96,7 @@
           </li>
         </ul>
       </nav>
-      <ul class="category-list-header">
-        <li>
-          <a class="category-link" href="catalog.html">Виртуальная реальность</a>
-        </li>
-        <li>
-          <a class="category-link" href="catalog.html">Моноподы для селфи</a>
-        </li>
-        <li>
-          <a class="category-link" href="catalog.html">Экшн-камеры</a>
-        </li>
-        <li>
-          <a class="category-link" href="catalog.html">Фитнес-браслеты</a>
-        </li>
-        <li>
-          <a class="category-link" href="catalog.html">Умные часы </a>
-        </li>
-        <li>
-          <a class="category-link" href="catalog.html">Квадрокоптеры</a>
-        </li>
-      </ul>
+
     </div>
   </header>
 
@@ -292,7 +318,7 @@
 
     <section class="delivery-custom-made container">
       <div class="delivery-image-wrapper">
-      <a class="button button-delivery" href="delivery_custom_made.html">Доставим редкий товар под заказ</a>
+        <a class="button button-delivery" href="delivery_custom_made.html">Доставим редкий товар под заказ</a>
       </div>
     </section>
 
@@ -402,6 +428,41 @@
       </div>
     </div>
   </footer>
+  <div class="modal-container">
+      <section class="modal-content">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <h2 class="modal-title">Доставка под заказ</h2>
+        <form  class="delivery-modal" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="field-group name">
+            <label class="field-label" for="field-name">Ваше имя:</label>
+            <input class="modal-field name-field" id="field-name" type="text" name="name" placeholder="Введите имя">
+            <span class="modal-field-text name">Добавьте имя</span>
+          </p>
+          <p class="field-group mail-field">
+            <label class="field-label" for="field-mail">Ваш e-mail:</label>
+            <input class="modal-field email" id="field-mail" type="" name="email" placeholder="почта">
+            <span class="modal-field-text mail-text">Забавный у вас адрес</span>
+          </p>
+          <p class="field-group name-product">
+            <label class="field-label" for="field-wich-product">Что нужно привезти:</label>
+            <input class="modal-field" id="field-wich-product" type="text" name="product" placeholder="В свободной форме">
+          </p>
+          <p class="field-group amount">
+            <label class="field-label">Количество:</label>
+              <button class="button-minus" type="button"></button>
+              <input class="modal-field-amount" type="number" value="1" name="amount">
+               <button class="button-plus" type="button"></button>
+          </p>
+          <button class="button-sending" type="submit">Отправить </button>
+        </form>
+
+      </section>
+    </div>
+  
+
+  </div>
 </body>
 
 </html>
