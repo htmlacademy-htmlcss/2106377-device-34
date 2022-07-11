@@ -6,6 +6,7 @@
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/outline.css">
+  <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
@@ -62,7 +63,7 @@
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item products">
-            <a class="navigation-link catalog" href="catalog.html">Каталог товаров</a>
+            <a class="navigation-link catalog" href="#">Каталог товаров</a>
             <button class="button-category" type="menu"></button>
             <ul class="category-list-subcatalog">
               <li class="category-item vr">
@@ -107,7 +108,7 @@
         <li class="gallery-item first-slider">
           <p class="number">01</p>
           <div class="slider-inner">
-            <img class="slider-image" src="./images/rastr/index/quadcopter.png" width="560" height="560"
+            <img class="slider-image" src="/images/rastr/index/quadcopter.png" width="560" height="560"
               alt="квадрокоптер">
             <div class="slider-profile">
               <p class="gallery-description-title">Порхает как бабочка,
@@ -203,8 +204,6 @@
           <span class="visually-hidden">Следующее фото</span>
         </button>
       </div>
-
-
     </section>
 
     <section class="catalog-category container">
@@ -212,7 +211,7 @@
       <ol class="category-list">
         <li>
           <a class="catalog-link" href="catalog.html">
-            <div class="catalog-category-image">
+            <div class="catalog-category-image-wrapper">
               <img class="catalog-category-image" src="./images/vector/main-index/category-catalog/vr.svg" width="96.95"
               height="54.99" alt="Виртуальная реальность">
             </div>
@@ -221,101 +220,85 @@
         </li>
         <li>
           <a class="catalog-link" href="catalog.html">
+            <div class="catalog-category-image-wrapper">
             <img class="catalog-category-image" src="./images/vector/main-index//category-catalog/monopod-selfies.svg"
               width="85.87" height="117" alt="Моноподы для селфи">
+            </div>
             <p class="catalog-category-description">Моноподы для селфи</p>
           </a>
         </li>
         <li>
           <a class="catalog-link" href="catalog.html">
+            <div class="catalog-category-image-wrapper">
             <img class="catalog-category-image" src="./images/vector/main-index/category-catalog/action-cameras.svg"
               width="71.02" height="87" alt="Экшн-камеры">
+            </div>
             <p class="catalog-category-description">Экшн-камеры</p>
           </a>
         </li>
         <li>
           <a class="catalog-link" href="catalog.html">
+            <div class="catalog-category-image-wrapper">
             <img class="catalog-category-image" src="./images/vector/main-index/category-catalog/fit-bracelets.svg"
               width="107.31" height="64.99" alt="Фитнес-браслеты">
+            </div>
             <p class="catalog-category-description">Фитнес-браслеты</p>
           </a>
         </li>
         <li>
           <a class="catalog-link" href="catalog.html">
+            <div class="catalog-category-image-wrapper">
             <img class="catalog-category-image" src="./images/vector/main-index/category-catalog/smart-watches.svg"
               width="56.01" height="97.98" alt="Умные часы">
+            </div>
             <p class="catalog-category-description">Умные часы</p>
           </a>
         </li>
         <li>
           <a class="catalog-link" href="catalog.html">
+            <div class="catalog-category-image-wrapper">
             <img class="catalog-category-image" src="./images/vector/main-index/category-catalog/quadcopters.svg"
               width="132.03" height="69.01" alt="Квадрокоптеры">
+            </div>
             <p class="catalog-category-description">Квадрокоптеры</p>
           </a>
         </li>
       </ol>
     </section>
 
-    <section class="services-container">
-      <h2 class="visually-hidden">Сервисы</h2>
-      <ul class="services-description-list">
-        <li class="box-delivery">
-          <ul class="services-list-shipping">
-            <li class="services-item-shipping">
-              <a class="button-services shipping" href="#">Доставка</a>
-            </li>
-            <li class="services-item-guarantee">
-              <a class="button-services guarantee" href="#">Гарантия</a>
-            </li>
-            <li class="services-item-credit">
-              <a class="button-services credit" href="#">Кредит</a>
-            </li>
-          </ul>
-          <div class="services-text">
+    <section class="services">
+      <div class="services-wrapper container">
+        <ol class="services-list">
+          <li class="services-item delivery-services">
+            <a class="button button-services " href="#">Доставка</a>
+          </li>
+          <li class="services-item guarantee-services">
+            <a class="button button-services" href="#">Гарантия</a>
+          </li>
+          <li class="services-item credit-services">
+            <a class="button button-services" href="#">Кредит</a>
+          </li>
+        </ol>
+        <ol class="services-description-list">
+          <li class="services-item-delivery visible">
             <p class="services-description-title">Доставка</p>
             <p class="services-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду
               совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-          </div>
-
-        </li>
-        <li class="box-guarantee">
-          <ul class="services-list-guarantee">
-            <li class="services-item-shipping">
-              <a class="button-services shipping" href="#">Доставка</a>
-            </li>
-            <li class="services-item-guarantee">
-              <a class="button-services guarantee" href="#">Гарантия</a>
-            </li>
-            <li class="services-item-credit">
-              <a class="button-services credit" href="#">Кредит</a>
-            </li>
-          </ul>
-          <div class="services-text">
+          </li>
+          <li class="services-item-guarantee">
             <p class="services-description-title">Гарантия</p>
-            <p class="services-description">Если из-за возгорания купленного у нас товара у вас сгорит дом
-              — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-          </div>
-        </li>
-        <li class="box-credit">
-          <ul class="services-list-credit">
-            <li class="services-item-shipping">
-              <a class="button-services shipping" href="#">Доставка</a>
-            </li>
-            <li class="services-item-guarantee">
-              <a class="button-services guarantee" href="#">Гарантия</a>
-            </li>
-            <li class="services-item-credit">
-              <a class="button-services credit" href="#">Кредит</a>
-            </li>
-          </ul>
-          <div class="services-text">
+            <p class="services-description">Если из-за возгорания купленного у нас товара у вас
+              сгорит дом — не переживайте, мы выдадим вам новый.
+              Товар, не дом, конечно же.
+          </li>
+          <li class="services-item-credit">
             <p class="services-description-title">Кредит</p>
             <p class="services-description">Залезть в долговую яму стало проще! Кредитные консультанты
               подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ol>
+      </div>
+
     </section>
 
     <section class="delivery-custom-made container">
