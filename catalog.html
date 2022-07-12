@@ -97,75 +97,92 @@
           <h2 class="catalog-products-title">фильтр:</h2>
           <fieldset class="filter-group cost-field">
             <legend class="catalog-filter-title">Стоимость</legend>
-            <input type="range" min="0" max="5000" value="3000">
-            <div class="cost">
-              <p class="text">от 0</p>
-              <p class="text">до 5000</p>
+            <div class="range-track">
+              <div class="range-bar" style="left: 0; width: 119px">
+                <button class="range-toggle toggle-min" type="button"></button>
+                <button class="range-toggle toggle-max" type="button"></button>
+              </div>
+            </div>
+            <div class="range-wrapper-cost">
+              <label class="filter-label">
+                от <input class="range-input" type="number" value="0" name="min-price"></label>
+              <label class="filter-label">
+                до <input class="range-input" type="number" value="5000" name="max-price"></label>
             </div>
           </fieldset>
+          
           <fieldset class="filter-group color-field">
             <legend class="catalog-filter-title">Цвет</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="black" checked>
-                  Черный
+                  <span class="control-icon"></span>
+                  <span class="control-caption">Черный</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="white" checked>
-                  Белый
+                  <span class="control-icon"></span>
+                  <span class="control-caption">Белый</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="blue">
-                  Синий
+                  <span class="control-icon"></span>
+                  <span class="control-caption">Синий</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="red">
-                  Красный
+                  <span class="control-icon"></span>
+                  <span class="control-caption">Красный</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="pink">
-                  Розовый
+                  <span class="control-icon"></span>
+                  <span class="control-caption">Розовый</span>
                 </label>
               </li>
             </ul>
           </fieldset>
+
           <fieldset class="filter-group bluetooth-field">
             <legend class="catalog-filter-title">Bluetooth</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input-radio" type="radio" name="bluetooth" value="yes" checked>
-                  Есть
+                  <span class="control-icon-radio"></span>
+                  <span class="control-caption">Есть</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input-radio" type="radio" name="bluetooth" value="no">
-                  Нет
+                  <span class="control-icon-radio"></span>
+                  <span class="control-caption">Нет</span>
                 </label>
               </li>
             </ul>
           </fieldset>
+
           <button class="show" type="submit">Показать</button>
         </form>
 
         <div class="catalog-product-card-sorting">
           <div class="catalog-sorting">
             <h2 class="catalog-sorting-title">сортировка:</h2>
-            <select class="select-control" aria-label="Сортировка">
-              <option value="popular">Популярные</option>
-              <option value="cheap">Дешёвые</option>
-              <option value="expensive">Дорогие</option>
-            </select>
+              <select class="select-control" aria-label="Сортировка">
+                <option value="popular">Популярные</option>
+                <option value="cheap">Дешёвые</option>
+                <option value="expensive">Дорогие</option>
+              </select>
             <div class="sorting-button">
               <a href="#" class="button button-up"></a>
               <a href="#" class="button button-down"></a>
