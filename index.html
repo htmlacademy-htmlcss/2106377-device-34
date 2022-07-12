@@ -116,30 +116,32 @@
               <p class="gallery-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
                 замаскированным
                 под стандартную камеру.</p>
-              <a class="button button-detail" href="#">Подробнее</a>
+              <div class="wrapper-button-detail">
+                <a class="button button-detail" href="#">Подробнее</a>
+                <ul class="slider-pagination">
+                  <li class="slider-pagination-item">
+                    <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                      <span class="visually-hidden">Фото01</span>
+                    </button>
+                  </li>
+                  <li class="slider-pagination-item">
+                    <button class="slider-pagination-button-next" type="button">
+                      <span class="visually-hidden">Фото02</span>
+                    </button>
+                  </li>
+                  <li class="slider-pagination-item">
+                    <button class="slider-pagination-button-next" type="button">
+                      <span class="visually-hidden">Фото03</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
               <dl class="features">
                 <dd class="gallery-feature">Дальность полета</dd>
                 <dt class="gallery-value">800 м</dt>
                 <dl class="gallery-feature">Радиус поражения</dl>
                 <dt class="gallery-value">50 м</dt>
               </dl>
-              <ul class="slider-pagination">
-                <li class="slider-pagination-item">
-                  <button class="slider-pagination-button slider-pagination-button-current" type="button">
-                    <span class="visually-hidden">Фото01</span>
-                  </button>
-                </li>
-                <li class="slider-pagination-item">
-                  <button class="slider-pagination-button-next" type="button">
-                    <span class="visually-hidden">Фото02</span>
-                  </button>
-                </li>
-                <li class="slider-pagination-item">
-                  <button class="slider-pagination-button-next" type="button">
-                    <span class="visually-hidden">Фото03</span>
-                  </button>
-                </li>
-              </ul>
             </div>
           </div>
         </li>
@@ -163,7 +165,6 @@
             </div>
           </div>
         </li>
-
         <li class="gallery-item third-slider">
           <p class="number">03</p>
           <div class="slider-inner">
@@ -189,18 +190,12 @@
         </li>
       </ul>
       <div class="slider">
-        <button class="button-slider" type="button">
-          <svg class="slider-icon" aria-hidden="true" focusable="false" width="20" height="60" viewBox="0 0 20 60"
-            fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 60h-3.5L0 30 16.5 0H20L3.8 30 20 60Z" fill="#000" />
-          </svg>
+        <span class="slider-left"></span>
+        <button class="button-slider visually-hidden" type="button">
           <span class="visually-hidden">Предыдущее фото</span>
         </button>
-        <button class="button-slider" type="button">
-          <svg class="slider-icon" aria-hidden="true" focusable="false" width="20" height="60" viewBox="0 0 20 60"
-            fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0h3.5L20 30 3.5 60H0l16.2-30L0 0Z" fill="#000" />
-          </svg>
+        <span class="slider-right"></span>
+        <button class="button-slider visually-hidden" type="button">
           <span class="visually-hidden">Следующее фото</span>
         </button>
       </div>
@@ -212,8 +207,8 @@
         <li>
           <a class="catalog-link" href="catalog.html">
             <div class="catalog-category-image-wrapper">
-              <img class="catalog-category-image" src="./images/vector/main-index/category-catalog/vr.svg" width="96.95"
-              height="54.99" alt="Виртуальная реальность">
+              <img class="catalog-category-image image-vr" src="./images/vector/main-index/category-catalog/vr.svg"
+                width="96.95" height="54.99" alt="Виртуальная реальность">
             </div>
             <p class="catalog-category-description">Виртуальная реальность</p>
           </a>
@@ -221,17 +216,19 @@
         <li>
           <a class="catalog-link" href="catalog.html">
             <div class="catalog-category-image-wrapper">
-            <img class="catalog-category-image" src="./images/vector/main-index//category-catalog/monopod-selfies.svg"
-              width="85.87" height="117" alt="Моноподы для селфи">
+              <img class="catalog-category-image image-monopod"
+                src="./images/vector/main-index//category-catalog/monopod-selfies.svg" width="85.87" height="117"
+                alt="Моноподы для селфи">
             </div>
-            <p class="catalog-category-description">Моноподы для селфи</p>
+            <p class="catalog-category-description">Моноподы <br>для селфи</p>
           </a>
         </li>
         <li>
           <a class="catalog-link" href="catalog.html">
             <div class="catalog-category-image-wrapper">
-            <img class="catalog-category-image" src="./images/vector/main-index/category-catalog/action-cameras.svg"
-              width="71.02" height="87" alt="Экшн-камеры">
+              <img class="catalog-category-image image-cameras"
+                src="./images/vector/main-index/category-catalog/action-cameras.svg" width="71.02" height="87"
+                alt="Экшн-камеры">
             </div>
             <p class="catalog-category-description">Экшн-камеры</p>
           </a>
@@ -239,8 +236,9 @@
         <li>
           <a class="catalog-link" href="catalog.html">
             <div class="catalog-category-image-wrapper">
-            <img class="catalog-category-image" src="./images/vector/main-index/category-catalog/fit-bracelets.svg"
-              width="107.31" height="64.99" alt="Фитнес-браслеты">
+              <img class="catalog-category-image image-bracelets"
+                src="./images/vector/main-index/category-catalog/fit-bracelets.svg" width="107.31" height="64.99"
+                alt="Фитнес-браслеты">
             </div>
             <p class="catalog-category-description">Фитнес-браслеты</p>
           </a>
@@ -248,8 +246,9 @@
         <li>
           <a class="catalog-link" href="catalog.html">
             <div class="catalog-category-image-wrapper">
-            <img class="catalog-category-image" src="./images/vector/main-index/category-catalog/smart-watches.svg"
-              width="56.01" height="97.98" alt="Умные часы">
+              <img class="catalog-category-image image-watches"
+                src="./images/vector/main-index/category-catalog/smart-watches.svg" width="56.01" height="97.98"
+                alt="Умные часы">
             </div>
             <p class="catalog-category-description">Умные часы</p>
           </a>
@@ -257,8 +256,9 @@
         <li>
           <a class="catalog-link" href="catalog.html">
             <div class="catalog-category-image-wrapper">
-            <img class="catalog-category-image" src="./images/vector/main-index/category-catalog/quadcopters.svg"
-              width="132.03" height="69.01" alt="Квадрокоптеры">
+              <img class="catalog-category-image image-quadcopters"
+                src="./images/vector/main-index/category-catalog/quadcopters.svg" width="132.03" height="69.01"
+                alt="Квадрокоптеры">
             </div>
             <p class="catalog-category-description">Квадрокоптеры</p>
           </a>
@@ -270,7 +270,7 @@
       <div class="services-wrapper container">
         <ol class="services-list">
           <li class="services-item delivery-services">
-            <a class="button button-services " href="#">Доставка</a>
+            <a class="button button-services" href="#">Доставка</a>
           </li>
           <li class="services-item guarantee-services">
             <a class="button button-services" href="#">Гарантия</a>
@@ -302,15 +302,18 @@
     </section>
 
     <section class="delivery-custom-made container">
-      <div class="delivery-image-wrapper">
-        <a class="button button-delivery" href="delivery_custom_made.html">Доставим редкий товар под заказ</a>
+      <div class="delivery-image-yellow-wrapper">
+        <img class="delivery-image-car" src="./images/vector/main-index/delivery-car.svg" width="47" height="31"
+          alt="Машина доставки">
       </div>
+      <a class="button button-delivery" href="delivery_custom_made.html">Доставим редкий товар под заказ</a>
+      <div class="delivery-image-wrapper"></div>
     </section>
 
     <div class="columns-about_us container">
       <section class="about_us">
         <h2 class="about_us-title">О нас</h2>
-        <p class="about_us-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас. </p>
+        <p class="about_us-text">Огромный выбор гаджетов не оставит равнодушным <br>гика, который есть в каждом из нас. </p>
         <p class="about_us-text">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:
         </p>
         <ul class="about_us-transport">
@@ -351,7 +354,7 @@
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="subscription-mail">
               <input class="mail" type="email" id="subscription-mail" name="subscription-mail"
-                placeholder="example@email.ru">
+                placeholder="Ваш e-mail">
             </label>
             <input class="subscription-input" type="submit" value="Подписаться">
           </form>
@@ -408,45 +411,41 @@
       </div>
 
       <div class="footer-phone-and-developer">
-        <a class="footer-contacts-phone" href="tel:+78128121212">Тел.:+7(812)812-12-12</a>
+        <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
         <a class="htmlacademy-link" href="https://htmlacademy.ru/"></a>
       </div>
     </div>
   </footer>
   <div class="modal-container">
-      <section class="modal-content">
-        <button class="modal-close-button">
-          <span class="visually-hidden">Закрыть</span>
-        </button>
-        <h2 class="modal-title">Доставка под заказ</h2>
-        <form  class="delivery-modal" action="https://echo.htmlacademy.ru/" method="post">
-          <p class="field-group name">
-            <label class="field-label" for="field-name">Ваше имя:</label>
-            <input class="modal-field name-field" id="field-name" type="text" name="name" placeholder="Введите имя">
-            <span class="modal-field-text name">Добавьте имя</span>
-          </p>
-          <p class="field-group mail-field">
-            <label class="field-label" for="field-mail">Ваш e-mail:</label>
-            <input class="modal-field email" id="field-mail" type="" name="email" placeholder="почта">
-            <span class="modal-field-text mail-text">Забавный у вас адрес</span>
-          </p>
-          <p class="field-group name-product">
-            <label class="field-label" for="field-wich-product">Что нужно привезти:</label>
-            <input class="modal-field" id="field-wich-product" type="text" name="product" placeholder="В свободной форме">
-          </p>
-          <p class="field-group amount">
-            <label class="field-label">Количество:</label>
-              <button class="button-minus" type="button"></button>
-              <input class="modal-field-amount" type="number" value="1" name="amount">
-               <button class="button-plus" type="button"></button>
-          </p>
-          <button class="button-sending" type="submit">Отправить </button>
-        </form>
-
-      </section>
-    </div>
-  
-
+    <section class="modal-content">
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <h2 class="modal-title">Доставка под заказ</h2>
+      <form class="delivery-modal" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="field-group name">
+          <label class="field-label" for="field-name">Ваше имя:</label>
+          <input class="modal-field name-field" id="field-name" type="text" name="name" placeholder="Введите имя">
+          <span class="modal-field-text name">Добавьте имя</span>
+        </p>
+        <p class="field-group mail-field">
+          <label class="field-label" for="field-mail">Ваш e-mail:</label>
+          <input class="modal-field email" id="field-mail" type="" name="email" placeholder="почта">
+          <span class="modal-field-text mail-text">Забавный у вас адрес</span>
+        </p>
+        <p class="field-group name-product">
+          <label class="field-label" for="field-wich-product">Что нужно привезти:</label>
+          <input class="modal-field" id="field-wich-product" type="text" name="product" placeholder="В свободной форме">
+        </p>
+        <p class="field-group amount">
+          <label class="field-label">Количество:</label>
+          <button class="button-minus" type="button"></button>
+          <input class="modal-field-amount" type="number" value="1" name="amount">
+          <button class="button-plus" type="button"></button>
+        </p>
+        <button class="button-sending" type="submit">Отправить </button>
+      </form>
+    </section>
   </div>
 </body>
 
