@@ -12,14 +12,13 @@
   <header class="page-header">
     <div class="page-header-container">
       <h1 class="visually-hidden">Device</h1>
-      <a class="logo" href="index.html">
-        <img class="logo-image" src="/images/vector/header/logo.svg" width="145" height="36"
-          alt="Логотип Device">
+      <a class="logo" href="#">
+        <img class="logo-image" src="/images/vector/header/logo.svg" width="145" height="36" alt="Логотип Device.">
       </a>
       <div class="user-menu">
         <form class="user-search" action="https://echo.htmlacademy.ru/" method="get">
-          <label class="search" for="search-field">
-            <input id="search-field" class="text-input" type="text" name="search" placeholder="Текст поиска">
+          <label class="search">
+            <input class="text-input" type="text" name="search" placeholder="Текст поиска">
           </label>
           <input class="search-input" type="submit" value="Найти">
         </form>
@@ -35,14 +34,14 @@
               <ul class="cart-list">
                 <li class="cart-item">
                   <img class="cart-product-image" src="/images/rastr/index/popover-nonprofessional-selfie-stick.jpg"
-                    width="39" height="43" alt="Любительская селфи-палка">
+                    width="39" height="43" alt="Любительская селфи-палка.">
                   <span class="cart-product">Любительская селфи-палка</span>
                   <button class="button-cart-product visually-hidden" type="button"></button>
                   <span class="cart-product-icon"></span>
                 </li>
                 <li class="cart-item">
                   <img class="cart-product-image" src="./images/rastr/index/popover-professional-selfie-stick.jpg"
-                    width="39" height="43" alt="Профессиональная селфи-палка">
+                    width="39" height="43" alt="Профессиональная селфи-палка.">
                   <span class="cart-product">Профессиональная селфи-палка</span>
                   <button class="button-cart-product visually-hidden" type="button"></button>
                   <span class="cart-product-icon"></span>
@@ -63,7 +62,7 @@
         <ul class="navigation-list">
           <li class="navigation-item products">
             <a class="navigation-link catalog" href="#">Каталог товаров</a>
-            <button class="button-category" type="menu"></button>
+            <button class="button-category" type="button"></button>
             <ul class="category-list-subcatalog">
               <li class="category-item vr">
                 <a class="category-link" href="catalog.html">Виртуальная реальность</a>
@@ -96,7 +95,6 @@
           </li>
         </ul>
       </nav>
-
     </div>
   </header>
 
@@ -107,12 +105,18 @@
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">Главная</a>
+            <span class="visually-hidden">Главная.</span>
+            <span class="breadcrumbs-later"></span>
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">Каталог товаров</a>
+            <span class="visually-hidden">Каталог товаров.</span>
+            <span class="breadcrumbs-later"></span>
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link">Моноподы для селфи</a>
+            <span class="visually-hidden">Моноподы для селфи.</span>
+            <span class="breadcrumbs-later visually-hidden"></span>
           </li>
         </ul>
       </div>
@@ -185,6 +189,7 @@
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input-radio" type="radio" name="bluetooth" value="yes" checked>
+                  <span class="visually-hidden">bluetooth.</span>
                   <span class="control-icon-radio"></span>
                   <span class="control-caption">Есть</span>
                 </label>
@@ -192,6 +197,7 @@
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input-radio" type="radio" name="bluetooth" value="no">
+                  <span class="visually-hidden">bluetooth.</span>
                   <span class="control-icon-radio"></span>
                   <span class="control-caption">Нет</span>
                 </label>
@@ -211,8 +217,12 @@
               <option value="expensive">Дорогие</option>
             </select>
             <div class="sorting-button">
-              <a href="#" class="button button-up"></a>
-              <a href="#" class="button button-down"></a>
+              <div class="up-arrow-wraper">
+                <button class="button button-up visually-hidden" type="button"></button>
+              </div>
+              <div class="down-arrow-wraper">
+                <button class="button button-down visually-hidden" type="button"></button>
+              </div>
             </div>
           </div>
 
@@ -221,7 +231,7 @@
             <ul class="product-card-list">
               <li class="product-card-item">
                 <img class="product-card-image" src="./images/rastr/catalog/nonprofessional-selfie-stick.jpg"
-                  width="360" height="380" alt="Любительская селфи-палка">
+                  width="360" height="380" alt="Любительская селфи-палка.">
                 <a class="product-card-link invisible" href="product.html">Подробнее</a>
                 <div class="title-price">
                   <h3 class="product-card-title">Любительская <br> селфи-палка</h3>
@@ -231,7 +241,7 @@
               </li>
               <li class="product-card-item">
                 <img class="product-card-image" src="./images/rastr/catalog/professional-selfie-stick.jpg" width="360"
-                  height="380" alt="Профессиональная селфи-палка">
+                  height="380" alt="Профессиональная селфи-палка.">
                 <a class="product-card-link invisible" href="product.html">Подробнее</a>
                 <div class="title-price">
                   <h3 class="product-card-title">Профессиональная <br> селфи-палка</h3>
@@ -240,7 +250,7 @@
               </li>
               <li class="product-card-item">
                 <img class="product-card-image" src="./images/rastr/catalog/unsinkable-selfie-stick.jpg" width="360"
-                height="380" alt="Непотопляемая селфи-палка">
+                  height="380" alt="Непотопляемая селфи-палка.">
                 <a class="product-card-link invisible" href="product.html">Подробнее</a>
                 <div class="title-price">
                   <h3 class="product-card-title">Непотопляемая <br> селфи-палка</h3>
@@ -249,7 +259,7 @@
               </li>
               <li class="product-card-item">
                 <img class="product-card-image" src="./images/rastr/catalog/selfie-stick-follow-me.jpg" width="360"
-                height="380" alt="Селфи-палка «Следуй за мной»">
+                  height="380" alt="Селфи-палка «Следуй за мной.»">
                 <a class="product-card-link invisible" href="product.html">Подробнее</a>
                 <div class="title-price">
                   <h3 class="product-card-title">Селфи-палка «Следуй <br>за мной»</h3>
@@ -295,7 +305,7 @@
       <div class="footer-logo-address">
         <h2 class="visually-hidden">Device</h2>
         <img class="footer-contact-logo" src="./images/vector/footer/group-logo-device.svg" width="145" height="36"
-          alt="Логотип Device">
+          alt="Логотип Device.">
         <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
       </div>
 
