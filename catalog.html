@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Каталог</title>
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/outline.css">
+
 </head>
 
 <body>
@@ -129,9 +129,11 @@
           <fieldset class="filter-group cost-field">
             <legend class="catalog-filter-title">Стоимость</legend>
             <div class="range-track">
-              <div class="range-bar" style="left: 0; width: 119px">
+              <div class="range-bar">
                 <button class="range-toggle toggle-min" type="button"></button>
+                <span class="visually-hidden">Изменить минимальную цену.</span>
                 <button class="range-toggle toggle-max" type="button"></button>
+                <span class="visually-hidden">Изменить максимальную цену.</span>
               </div>
             </div>
             <div class="range-wrapper-cost">
@@ -213,8 +215,11 @@
             <h2 class="catalog-sorting-title">сортировка:</h2>
             <select class="select-control" aria-label="Сортировка">
               <option value="popular">Популярные</option>
+              <span class="visually-hidden">Популярные.</span>
               <option value="cheap">Дешёвые</option>
+              <span class="visually-hidden">Дешёвые.</span>
               <option value="expensive">Дорогие</option>
+              <span class="visually-hidden">Дорогие.</span>
             </select>
             <div class="sorting-button">
               <div class="up-arrow-wraper">
