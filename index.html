@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/outline.css">
   <link rel="icon" href="favicon.ico">
 </head>
 
@@ -26,30 +25,32 @@
         <a class="user-menu-link login" href="#">Войти</a>
         <ul class="user-menu-list">
           <li class="user-menu-item compare">
-            <a class="user-menu-link" href="#">Сравнить</a>
+            <a class="user-menu-link compare-link" href="#">Сравнить</a>
           </li>
           <li class="user-menu-item cart">
-            <a class="user-menu-link" href="#">Корзина</a>
+            <a class="user-menu-link cart-link" href="#">Корзина</a>
             <div class="popover popover-box popover-open">
               <h2 class="popover-title visually-hidden">Корзина</h2>
               <ul class="cart-list">
                 <li class="cart-item">
-                  <img class="cart-product-image" src="/images/rastr/index/popover-nonprofessional-selfie-stick.jpg"
-                    width="39" height="43" alt="Любительская селфи-палка.">
-                  <span class="cart-product">Любительская селфи-палка</span>
-                  <button class="button-cart-product visually-hidden" type="button">
+                  <a class="cart-product-link" href="product.html">
+                    <img class="cart-product-image" src="/images/rastr/index/popover-nonprofessional-selfie-stick.jpg"
+                      width="39" height="43" alt="Любительская селфи-палка.">
+                    <span class="cart-product">Любительская селфи-палка</span>
+                  </a>
+                  <button class="button-cart-product" type="button">
                     <span class="visually-hidden">Удалить из карзины.</span>
                   </button>
-                  <span class="cart-product-icon"></span>
                 </li>
                 <li class="cart-item">
-                  <img class="cart-product-image" src="./images/rastr/index/popover-professional-selfie-stick.jpg"
-                    width="39" height="43" alt="Профессиональная селфи-палка.">
-                  <span class="cart-product">Профессиональная селфи-палка</span>
-                  <button class="button-cart-product visually-hidden" type="button">
+                  <a class="cart-product-link" href="product.html">
+                    <img class="cart-product-image" src="./images/rastr/index/popover-professional-selfie-stick.jpg"
+                      width="39" height="43" alt="Профессиональная селфи-палка.">
+                    <span class="cart-product">Профессиональная селфи-палка</span>
+                  </a>
+                  <button class="button-cart-product" type="button">
                     <span class="visually-hidden">Удалить из карзины.</span>
                   </button>
-                  <span class="cart-product-icon"></span>
                 </li>
               </ul>
               <div class="summary-cart">
@@ -67,7 +68,9 @@
         <ul class="navigation-list">
           <li class="navigation-item products">
             <a class="navigation-link catalog" href="#">Каталог товаров</a>
-            <button class="button-category" type="button"></button>
+            <button class="button-category" type="button">
+              <span class="visually-hidden">Развернуть вложенное меню.</span>
+            </button>
             <ul class="category-list-subcatalog">
               <li class="category-item vr">
                 <a class="category-link" href="catalog.html">Виртуальная реальность</a>
@@ -209,8 +212,7 @@
         <li>
           <a class="catalog-link" href="catalog.html">
             <div class="catalog-category-image-wrapper">
-              <img class="catalog-category-image image-vr" src="./images/vector/main-index/category-catalog/vr.svg"
-                width="97" height="55" alt="Виртуальная реальность.">
+              <img class="catalog-category-image image-vr" src="./images/vector/main-index/category-catalog/vr.svg" width="97" height="55" alt="Виртуальная реальность.">
             </div>
             <p class="catalog-category-description">Виртуальная реальность</p>
           </a>
@@ -219,7 +221,7 @@
           <a class="catalog-link" href="catalog.html">
             <div class="catalog-category-image-wrapper">
               <img class="catalog-category-image image-monopod"
-                src="./images/vector/main-index//category-catalog/monopod-selfies.svg" width="86" height="117"
+                src="./images/vector/main-index/сategory-сatalog/monopod-selfies.svg" width="86" height="117"
                 alt="Моноподы для селфи.">
             </div>
             <p class="catalog-category-description">Моноподы <br>для селфи</p>
@@ -286,7 +288,7 @@
           <li class="services-item-delivery visible">
             <p class="services-description-title">Доставка</p>
             <p class="services-description">Мы с удовольствием доставим ваш товар прямо <br>к вашему подъезду совершенно
-              бесплатно! Ведь <br>мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
           </li>
           <li class="services-item-guarantee">
             <p class="services-description-title">Гарантия</p>
@@ -311,7 +313,10 @@
           alt="Машина доставки.">
       </div>
       <a class="button button-delivery" href="delivery-custom-made.html">Доставим редкий товар под заказ</a>
-      <div class="delivery-image-wrapper"></div>
+      <div class="delivery-image-wrapper">
+        <img class="delivery-image-info" src="/images/vector/main-index/info-delivery-custom-made.svg" width="2"
+          height="12" alt="Подробнее">
+      </div>
     </section>
 
     <div class="columns-about-us container">
@@ -380,13 +385,13 @@
           <h2 class="visually-hidden">Сервисы</h2>
           <ul class="footer-services-list">
             <li class="footer-services-item">
-              <a class="services-link" href="#">Доставка.</a>
+              <a class="services-link" href="#">Доставка</a>
             </li>
             <li class="footer-services-item">
-              <a class="services-link" href="#">Гарантия.</a>
+              <a class="services-link" href="#">Гарантия</a>
             </li>
             <li class="footer-services-item">
-              <a class="services-link" href="Contact.html">Контакты.</a>
+              <a class="services-link" href="Contact.html">Контакты</a>
             </li>
           </ul>
         </section>
@@ -426,27 +431,27 @@
       </button>
       <h2 class="modal-title">Доставка под заказ</h2>
       <form class="delivery-modal" action="https://echo.htmlacademy.ru/" method="post">
-        <p class="field-group name">
+        <p class="field-group name-field">
           <label class="field-label" for="field-name">Ваше имя:</label>
-          <input class="modal-field name-field" id="field-name" type="text" name="name" placeholder="Введите имя">
+          <input class="modal-input" id="field-name" type="text" name="name" placeholder="Введите имя">
           <span class="modal-field-text name">Добавьте имя.</span>
         </p>
         <p class="field-group mail-field">
           <label class="field-label" for="field-mail">Ваш e-mail:</label>
-          <input class="modal-field email" id="field-mail" type="email" name="email" placeholder="почта">
+          <input class="modal-input" id="field-mail" type="email" name="email" placeholder="почта">
           <span class="modal-field-text mail-text">Забавный у вас адрес.</span>
         </p>
-        <p class="field-group name-product">
+        <p class="field-group product-field">
           <label class="field-label" for="field-wich-product">Что нужно привезти:</label>
-          <input class="modal-field" id="field-wich-product" type="text" name="product" placeholder="В свободной форме">
+          <input class="modal-input" id="field-wich-product" type="text" name="product" placeholder="В свободной форме">
           <span class="visually-hidden">Какой товар привезти.</span>
         </p>
-        <p class="field-group amount">
-          <label class="field-label">Количество:</label>
+        <p class="field-group amount-field">
+          <label class="field-label" for="amount">Количество:</label>
           <button class="button-minus" type="button">
             <span class="visually-hidden">Уменьшить.</span>
           </button>
-          <input class="modal-field-amount" type="number" value="1" name="amount">
+          <input class="modal-input" id="amount" type="number" value="1" name="amount">
           <button class="button-plus" type="button">
             <span class="visually-hidden">Увеличить.</span>
           </button>
