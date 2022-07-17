@@ -65,33 +65,32 @@
         </ul>
       </div>
       <nav class="navigation">
+        <div class="navigation-roducts">
+          <button class="button-category" type="button">Каталог товаров
+            <span class="visually-hidden">Развернуть вложенное меню.</span>
+          </button>
+          <ul class="category-list-subcatalog">
+            <li class="category-item vr">
+              <a class="category-link" href="catalog.html">Виртуальная реальность</a>
+            </li>
+            <li class=" category-item fit-bracelets">
+              <a class="category-link" href="catalog.html">Фитнес-браслеты</a>
+            </li>
+            <li class="category-item quadcopters">
+              <a class="category-link" href="catalog.html">Квадрокоптеры</a>
+            </li>
+            <li class="category-item monopod-selfies">
+              <a class="category-link" href="catalog.html">Моноподы для селфи</a>
+            </li>
+            <li class="category-item smart-watches">
+              <a class="category-link" href="catalog.html">Умные часы </a>
+            </li>
+            <li class="category-item action-cameras">
+              <a class="category-link" href="catalog.html">Экшн-камеры</a>
+            </li>
+          </ul>
+        </div>
         <ul class="navigation-list">
-          <li class="navigation-item products">
-            <a class="navigation-link catalog" href="#">Каталог товаров</a>
-            <button class="button-category" type="button">
-              <span class="visually-hidden">Развернуть вложенное меню.</span>
-            </button>
-            <ul class="category-list-subcatalog">
-              <li class="category-item vr">
-                <a class="category-link" href="catalog.html">Виртуальная реальность</a>
-              </li>
-              <li class=" category-item fit-bracelets">
-                <a class="category-link" href="catalog.html">Фитнес-браслеты</a>
-              </li>
-              <li class="category-item quadcopters">
-                <a class="category-link" href="catalog.html">Квадрокоптеры</a>
-              </li>
-              <li class="category-item monopod-selfies">
-                <a class="category-link" href="catalog.html">Моноподы для селфи</a>
-              </li>
-              <li class="category-item smart-watches">
-                <a class="category-link" href="catalog.html">Умные часы </a>
-              </li>
-              <li class="category-item action-cameras">
-                <a class="category-link" href="catalog.html">Экшн-камеры</a>
-              </li>
-            </ul>
-          </li>
           <li class="navigation-item">
             <a class="navigation-link delivery" href="#">Доставка</a>
           </li>
@@ -131,12 +130,12 @@
                     </button>
                   </li>
                   <li class="slider-pagination-item">
-                    <button class="slider-pagination-button-next" type="button">
+                    <button class="slider-pagination-button button-second" type="button">
                       <span class="visually-hidden">Фото02</span>
                     </button>
                   </li>
                   <li class="slider-pagination-item">
-                    <button class="slider-pagination-button-next" type="button">
+                    <button class="slider-pagination-button button-third" type="button">
                       <span class="visually-hidden">Фото03</span>
                     </button>
                   </li>
@@ -195,12 +194,10 @@
         </li>
       </ul>
       <div class="slider">
-        <!-- <span class="slider-left"></span> -->
-        <button class="button-slider" type="button">
+        <button class="button-slider slider-left" type="button">
           <span class="visually-hidden">Предыдущее фото</span>
         </button>
-        <!-- <span class="slider-right"></span> -->
-        <button class="button-slider" type="button">
+        <button class="button-slider slider-right" type="button">
           <span class="visually-hidden">Следующее фото</span>
         </button>
       </div>
@@ -221,7 +218,7 @@
           <a class="catalog-link" href="catalog.html">
             <div class="catalog-category-image-wrapper">
               <img class="catalog-category-image image-monopod"
-                src="./images/vector/main-index/сategory-сatalog/monopod-selfies.svg" width="86" height="117"
+                src="./images/vector/main-index/сategory-сatalog/monopod-selfies.svg" width="97" height="55"
                 alt="Моноподы для селфи.">
             </div>
             <p class="catalog-category-description">Моноподы <br>для селфи</p>
@@ -274,14 +271,14 @@
       <h2 class="visually-hidden">Сервисы</h2>
       <div class="services-wrapper container">
         <ol class="services-list">
-          <li class="services-item delivery-services">
-            <a class="button button-services" href="#">Доставка</a>
+          <li class="services-item">
+            <a class="button-services delivery-services" href="#">Доставка</a>
           </li>
-          <li class="services-item guarantee-services">
-            <a class="button button-services" href="#">Гарантия</a>
+          <li class="services-items">
+            <a class="button-services guarantee-services" href="#">Гарантия</a>
           </li>
-          <li class="services-item credit-services">
-            <a class="button button-services" href="#">Кредит</a>
+          <li class="services-item">
+            <a class="button-services credit-services" href="#">Кредит</a>
           </li>
         </ol>
         <ol class="services-description-list">
@@ -308,15 +305,17 @@
 
     <section class="delivery-custom-made container">
       <h2 class="visually-hidden">Доставка под заказ</h2>
-      <div class="delivery-image-yellow-wrapper">
+      <!-- <div class="delivery-image-yellow-wrapper">
         <img class="delivery-image-car" src="./images/vector/main-index/delivery-car.svg" width="47" height="31"
           alt="Машина доставки.">
-      </div>
-      <a class="button button-delivery" href="delivery-custom-made.html">Доставим редкий товар под заказ</a>
-      <div class="delivery-image-wrapper">
+      </div> -->
+      <button class="button-delivery-custom-made" href="delivery-custom-made.html">
+        <span class="custom-made">Доставим редкий товар под заказ</span>
+      </button>
+      <!-- <div class="delivery-image-wrapper">
         <img class="delivery-image-info" src="/images/vector/main-index/info-delivery-custom-made.svg" width="2"
           height="12" alt="Подробнее">
-      </div>
+      </div> -->
     </section>
 
     <div class="columns-about-us container">
@@ -356,7 +355,7 @@
         <div class="subscription-digest">
           <h2 class="subscription-title">Подпишитесь на рассылку</h2>
           <p class="subscription-text">Еженедельный дайджест с обзорами новинок, <br>длительными тест-драйвами,
-            распаковками,а также акции, <br>спецпредложения и вот это вот всё.</p>
+            распаковками,а также акции, спецпредложения и вот это вот всё.</p>
         </div>
         <div class="subscription-email">
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
