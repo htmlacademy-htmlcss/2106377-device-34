@@ -362,9 +362,11 @@ body {
   list-style-type: none;
   gap: 45px;
 }
+
 .navigation-link {
   display: inline-block;
 }
+
 /* main */
 
 .main-container {
@@ -391,7 +393,6 @@ body {
   padding: 0;
   list-style-type: none;
   margin-top: -150px;
-  z-index: 0;
 }
 
 .number {
@@ -675,7 +676,6 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 92px;
-  z-index: 1;
 }
 
 .button-services-credit:hover {
@@ -1320,7 +1320,7 @@ body {
 
 .catalog-filter-form {
   width: 320px;
-    padding-left: 60px;
+  padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 64px;
 }
@@ -1575,10 +1575,12 @@ body {
 
 .show:hover {
   background-color: #ffe17f;
+  background-image: none;
 }
 
 .show:active {
   background-color: #ffcc33;
+  background-image: none;
 }
 
 .show:focus {
@@ -2049,22 +2051,44 @@ body {
   font-size: 18px;
   line-height: 30px;
   color: inherit;
-  opacity: 0.5;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 3px solid #c4c4c4;
-  background-color: #ffffff;
+  background-color: transparent;
   padding: 16px;
-width: 100%;
+  width: 100%;
   margin: 0;
   box-sizing: border-box;
+}
+
+.mail:hover {
+  color: #000000;
+  background-color: #ebebeb;
+  }
+
+.mail:active {
+color: #000000;
+background-color: transparent;
+}
+
+.mail:disabled {
+  background-color: #f0f0f0;
+  opacity: 0.3;
+}
+
+.mail:focus {
+  background: #dcdcdc;
+}
+
+.mail:invalid {
+  border-bottom:2px solid #ff3d3d;
 }
 
 .subscription-input {
   padding: 15px 37px;
   border: 3px solid #c4c4c4;
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 .subscription-input:hover {
@@ -2080,6 +2104,10 @@ width: 100%;
 .subscription-input:focus {
   outline: 2px solid #af4ffa;
   transform: scale(-2px, -2px);
+}
+
+.subscription-input:disabled {
+  opacity: 0.3;
 }
 
 /* GRIDS catalog*/
@@ -2192,6 +2220,7 @@ width: 100%;
 /* popover */
 
 .popover {
+  position: relative;
   width: 320px;
   min-height: 255px;
   margin: 0;
@@ -2203,13 +2232,23 @@ width: 100%;
   background-color: #000000;
   position: absolute;
   top: 33px;
-  left: -160px;
-  z-index: 110;
+  left: -128px;
+  z-index: 1;
 }
 
-.popover-open {
-  display: none;
+.popover::before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 6px;
+  background-image: url("/images/vector/header/popover-arrow.svg");
+  top: -5px;
+  left: 160px;
 }
+
+/* .popover-open {
+  display: none;
+} */
 
 .cart-list {
   padding: 0;
@@ -2336,6 +2375,7 @@ width: 100%;
   height: 100%;
   display: flex;
   background-color: rgba(240, 240, 240, 0.9);
+  z-index: 1010;
 }
 
 .modal-hidden {
@@ -2423,10 +2463,36 @@ width: 100%;
   display: flex;
   align-items: center;
   color: #000000;
-  opacity: 0.3;
+  border: none;
   background-color: #f0f0f0;
   padding: 20px 36px 20px 20px;
   margin-top: 14px;
+}
+
+.modal-input:hover {
+  background: #dcdcdc;
+}
+
+.modal-input:active {
+  background: #ebebeb;
+}
+
+.modal-input:disabled {
+  background-color: #f0f0f0;
+  opacity: 0.3;
+}
+
+.modal-input:focus {
+  outline: 2px solid #af4fff;
+  transform: scale(-2px, -2px);
+}
+
+.modal-input:invalid {
+  outline: 2px solid #ff3d3d;
+}
+
+.modal-input:invalid .mail-text {
+  color: #ff3d3d;
 }
 
 .modal-field-text {
@@ -2434,20 +2500,18 @@ width: 100%;
   line-height: 20px;
 }
 
-.mail-text {
-  color: #ff3d3d;
-}
-
 .name-field .modal-input {
   background-image: url("/images/vector/login-modal.svg");
   background-position: 325px 24px;
   background-repeat: no-repeat;
+  opacity: 0.5;
 }
 
 .mail-field .modal-input {
   background-image: url("/images/vector/mail-modal.svg");
   background-position: 325px 24px;
   background-repeat: no-repeat;
+  opacity: 0.5;
 }
 
 .amount-field .modal-input {
@@ -2482,19 +2546,27 @@ width: 100%;
   position: relative;
 }
 
-.modal-input::-webkit-outer-spin-button,
-.modal-input::-webkit-inner-spin-button {
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
   padding: 0;
+}
+
+.number-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.number-input[type="number"]:hover,
+.number-input[type="number"]:focus {
+  -moz-appearance: number-input;
 }
 
 .button-minus {
   position: absolute;
   padding: 30px;
   border: none;
-  background: transparent;
-  background-image: url("/images/vector/header/minus.svg");
+  background-image: url("/images/vector/header/minus-hidden-menu.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f0f0f0;
@@ -2503,19 +2575,11 @@ width: 100%;
 }
 
 .button-minus:hover {
-  background-color: #dcdcdc;
-  background-image: url("/images/vector/header/minus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  top: 35px;
+  opacity: 0.6;
 }
 
 .button-minus:active {
-  background-color: #6d6a6a;
-  background-image: url("/images/vector/header/minus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  top: 35px;
+  opacity: 0.3;
 }
 
 .button-minus:focus {
@@ -2527,8 +2591,7 @@ width: 100%;
   position: absolute;
   padding: 30px;
   border: none;
-  background: transparent;
-  background-image: url("/images/vector/header/plus.svg");
+  background-image: url("/images/vector/header/plus-hidden-menu.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-color: #f0f0f0;
@@ -2538,21 +2601,11 @@ width: 100%;
 }
 
 .button-plus:hover {
-  background-color: #dcdcdc;
-  background-image: url("/images/vector/header/plus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  top: 35px;
-  left: 120px;
+  opacity: 0.6;
 }
 
 .button-plus:active {
-  background-color: #6d6a6a;
-  background-image: url("/images/vector/header/plus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  top: 35px;
-  left: 120px;
+  opacity: 0.3;
 }
 
 .button-plus:focus {
