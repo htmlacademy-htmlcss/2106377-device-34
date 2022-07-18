@@ -10,10 +10,11 @@
 
 <body>
   <header class="page-header">
-    <div class="page-header-container">
+    <div class="page-header-container-catalog">
       <h1 class="visually-hidden">Device</h1>
-      <a class="logo" href="#">
-        <img class="logo-image" src="/images/vector/header/logo.svg" width="145" height="36" alt="Логотип Device.">
+      <a class="logo" href="index.html">
+        <img class="logo-image" src="/images/vector/header/header-logo.svg" width="145" height="37"
+          alt="Логотип Device.">
       </a>
       <div class="user-menu">
         <form class="user-search" action="https://echo.htmlacademy.ru/" method="get">
@@ -22,29 +23,36 @@
           </label>
           <input class="search-input" type="submit" value="Найти">
         </form>
-        <a class="user-menu-link login" href="#">Войти</a>
+        <a class="user-menu-link login-catalog" href="#">Коля Петухов</a>
+        <a class="user-menu-link logout" href="#">Войти</a>
         <ul class="user-menu-list">
           <li class="user-menu-item compare">
-            <a class="user-menu-link" href="#">Сравнить</a>
+            <a class="user-menu-link compare-link" href="#">Сравнить</a>
           </li>
           <li class="user-menu-item cart">
-            <a class="user-menu-link" href="#">Корзина</a>
+            <a class="user-menu-link cart-link" href="#">Корзина</a>
             <div class="popover popover-box popover-open">
               <h2 class="popover-title visually-hidden">Корзина</h2>
               <ul class="cart-list">
                 <li class="cart-item">
-                  <img class="cart-product-image" src="/images/rastr/index/popover-nonprofessional-selfie-stick.jpg"
-                    width="39" height="43" alt="Любительская селфи-палка.">
-                  <span class="cart-product">Любительская селфи-палка</span>
-                  <button class="button-cart-product visually-hidden" type="button"></button>
-                  <span class="cart-product-icon"></span>
+                  <a class="cart-product-link" href="product.html">
+                    <img class="cart-product-image" src="/images/rastr/index/popover-nonprofessional-selfie-stick.jpg"
+                      width="39" height="43" alt="Любительская селфи-палка.">
+                    <span class="cart-product">Любительская селфи-палка</span>
+                  </a>
+                  <button class="button-cart-product" type="button">
+                    <span class="visually-hidden">Удалить из карзины.</span>
+                  </button>
                 </li>
                 <li class="cart-item">
-                  <img class="cart-product-image" src="./images/rastr/index/popover-professional-selfie-stick.jpg"
-                    width="39" height="43" alt="Профессиональная селфи-палка.">
-                  <span class="cart-product">Профессиональная селфи-палка</span>
-                  <button class="button-cart-product visually-hidden" type="button"></button>
-                  <span class="cart-product-icon"></span>
+                  <a class="cart-product-link" href="product.html">
+                    <img class="cart-product-image" src="./images/rastr/index/popover-professional-selfie-stick.jpg"
+                      width="39" height="43" alt="Профессиональная селфи-палка.">
+                    <span class="cart-product">Профессиональная селфи-палка</span>
+                  </a>
+                  <button class="button-cart-product" type="button">
+                    <span class="visually-hidden">Удалить из карзины.</span>
+                  </button>
                 </li>
               </ul>
               <div class="summary-cart">
@@ -59,31 +67,32 @@
         </ul>
       </div>
       <nav class="navigation">
+        <div class="navigation-products">
+          <button class="button-category" type="button">Каталог товаров
+            <span class="visually-hidden">Развернуть вложенное меню.</span>
+          </button>
+          <ul class="category-list-subcatalog">
+            <li class="category-item vr">
+              <a class="category-link" href="catalog.html">Виртуальная реальность</a>
+            </li>
+            <li class=" category-item fit-bracelets">
+              <a class="category-link" href="catalog.html">Фитнес-браслеты</a>
+            </li>
+            <li class="category-item quadcopters">
+              <a class="category-link" href="catalog.html">Квадрокоптеры</a>
+            </li>
+            <li class="category-item monopod-selfies">
+              <a class="category-link" href="catalog.html">Моноподы для селфи</a>
+            </li>
+            <li class="category-item smart-watches">
+              <a class="category-link" href="catalog.html">Умные часы </a>
+            </li>
+            <li class="category-item action-cameras">
+              <a class="category-link" href="catalog.html">Экшн-камеры</a>
+            </li>
+          </ul>
+        </div>
         <ul class="navigation-list">
-          <li class="navigation-item products">
-            <a class="navigation-link catalog" href="#">Каталог товаров</a>
-            <button class="button-category" type="button"></button>
-            <ul class="category-list-subcatalog">
-              <li class="category-item vr">
-                <a class="category-link" href="catalog.html">Виртуальная реальность</a>
-              </li>
-              <li class=" category-item fit-bracelets">
-                <a class="category-link" href="catalog.html">Фитнес-браслеты</a>
-              </li>
-              <li class="category-item quadcopters">
-                <a class="category-link" href="catalog.html">Квадрокоптеры</a>
-              </li>
-              <li class="category-item monopod-selfies">
-                <a class="category-link" href="catalog.html">Моноподы для селфи</a>
-              </li>
-              <li class="category-item smart-watches">
-                <a class="category-link" href="catalog.html">Умные часы </a>
-              </li>
-              <li class="category-item action-cameras">
-                <a class="category-link" href="catalog.html">Экшн-камеры</a>
-              </li>
-            </ul>
-          </li>
           <li class="navigation-item">
             <a class="navigation-link delivery" href="#">Доставка</a>
           </li>
@@ -95,6 +104,7 @@
           </li>
         </ul>
       </nav>
+
     </div>
   </header>
 
@@ -309,8 +319,10 @@
     <div class="footer-wrapper container">
       <div class="footer-logo-address">
         <h2 class="visually-hidden">Device</h2>
-        <img class="footer-contact-logo" src="./images/vector/footer/group-logo-device.svg" width="145" height="36"
-          alt="Логотип Device.">
+        <a class="logo-footer" href="#">
+          <img class="footer-contact-logo" src="/images/vector/footer/footer-logo-device.svg" width="145" height="36"
+            alt="Логотип Device.">
+        </a>
         <p class="footer-address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
       </div>
 
@@ -330,7 +342,7 @@
           </ul>
         </section>
         <section class="footer-social">
-          <h2 class="visually-hidden">Социальные сети</h2>
+          <h2 class="visually-hidden">Социальные сети.</h2>
           <ul class="footer-social-list">
             <li class="footer-social-item">
               <a class="button button-telegram" href="https://t.me/htmlacademy">
