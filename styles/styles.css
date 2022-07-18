@@ -249,6 +249,10 @@ body {
   background-position: 0 9px;
   background-repeat: no-repeat;
 }
+.compare-link {
+  display: inline-block;
+min-width: 85px;
+}
 
 .compare-link:hover {
   opacity: 0.6;
@@ -390,7 +394,7 @@ body {
 }
 
 .navigation-list {
-  min-width: 471px;
+  /* max-width: 471px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -1097,6 +1101,7 @@ body {
 
 .services-link {
   width: 125px;
+  display: block;
 }
 
 .services-link:hover {
@@ -1596,6 +1601,7 @@ body {
 }
 
 .show {
+  display: block;
   background-image: url("/images/vector/main-index/rectangle-yellow.svg");
   background-position: center;
   background-repeat: repeat-x;
@@ -1720,6 +1726,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+   min-width: 0;
 }
 
 .pagination-list {
@@ -1766,6 +1773,7 @@ width: 200px;
   text-decoration: none;
   text-transform: uppercase;
   padding: 25px;
+  display: inline-block;
 }
 
 .pagination-link-pagination-prev:hover,
@@ -1788,6 +1796,7 @@ width: 200px;
 /* FONTS header*/
 
 .user-menu-link {
+  display: block;
   color: inherit;
   align-items: center;
   text-decoration: none;
@@ -1802,6 +1811,7 @@ width: 200px;
   letter-spacing: 0.2em;
   text-decoration: none;
   text-transform: uppercase;
+  display: block;
 }
 
 /* FONTS  main*/
@@ -1812,6 +1822,7 @@ width: 200px;
   line-height: 18px;
   align-items: center;
   text-decoration: none;
+  display: block;
 }
 
 .gallery-description-title,
@@ -1925,6 +1936,7 @@ width: 200px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  display: block;
 }
 
 .footer-contacts-phone {
@@ -2203,8 +2215,10 @@ width: 200px;
 }
 
 .product-card-link:active {
-  background-color: #ffcc33;
-  background-image: none;
+  background-image: url("/images/vector/main-index/rectangle-yellow.svg");
+  background-position: center;
+  background-repeat: repeat-x;
+  display: block;
 }
 
 .product-card-item:hover .product-card-image {
@@ -2223,7 +2237,7 @@ width: 200px;
   opacity: 0.3;
 }
 
-.product-card-item:focus {
+.product-card-link:focus .product-card-item {
   outline: 2px solid #af4fff;
   transform: scale(-2px, -2px);
 }
